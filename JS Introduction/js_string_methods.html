@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <h2>JavaScript String Özellikleri</h2>
+        <p>length özelliği, bir dizenin uzunluğunu döndürür:</p>
+        <p>text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"</p>
+        <p id="demo"></p>
+        <script>
+         let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+         document.getElementById("demo").innerHTML = text1.length;
+        </script>
+       <hr>
+       <h2>slice() Yöntemi</h2>
+        <p><b>Slice() yöntemi</b>, bir dizenin bir bölümünü çıkarır ve çıkarılan parçaları yeni bir dizede döndürür:</p>
+        <p>Yöntem 2 parametre alır: başlangıç ​​konumu ve bitiş konumu (bitiş dahil değildir).</p>
+        <p>Bu örnek, bir dizenin 7. konumundan 12. konumuna (13-1) kadar bir kısmını dilimler:</p>
+        <p id="demo1"></p>
+        <script>
+            let str = "Apple, Banana, Kiwi";
+            document.getElementById("demo1").innerHTML = str.slice(7,13);
+        </script>
+       <hr>
+        <p>Bir parametre negatifse, konum dizenin sonundan sayılır.</p>
+        <p>Bu örnek, bir dizenin bir bölümünü -12 konumundan -6 konumuna dilimler:</p>
+         <p id="demo2"></p>
+         <script>
+             let str1 = "Apple, Banana, Kiwi";
+             document.getElementById("demo2").innerHTML = str1.slice(-12,-6);
+         </script>
+         <hr>
+         <p>İkinci parametreyi atlarsanız, yöntem dizenin geri kalanını dilimler halinde kesecektir:</p>
+         <p id="demo3"></p>
+         <script>
+         let str2 = "Apple, Banana, Kiwi";
+         document.getElementById("demo3").innerHTML = str2.slice(7);
+         </script>
+         <hr>
+         <p>veya sondan sayarak:</p>
+         <p id="demo4"></p>
+         <script>
+             let str3 = "Apple, Banana, Kiwi";
+             document.getElementById("demo4").innerHTML = str3.slice(-12);
+         </script>
+         <hr>
+         <h2>substring() Yöntemi</h2>
+         <p><b>substring() yöntemi</b>, bir dizenin bir bölümünü çıkarır ve çıkarılan parçaları yeni bir dizede döndürür:</p>
+         <p><b>substring()</b> ile benzerdir <b>slice()</b>.Aradaki fark, <b>substring() negatif</b> dizinleri kabul edememesidir.</p>      
+         <p id="demo5"></p>
+         <script>
+             let str4  = "Apple, Banana, Kiwi";
+             document.getElementById("demo5").innerHTML = str4.substring(7,13);
+         </script>
+           <hr>
+           <p>İkinci parametreyi atlarsanız substring(), dizenin geri kalanını kesecektir.</p>
+           <p id="demo6"></p>
+         <script>
+             let str5  = "Apple, Banana, Kiwi";
+             document.getElementById("demo6").innerHTML = str5.substring(7);
+         </script>
+           <hr>
+           <h2>substr() Yöntemi</h2>
+           <p><b>substr() yöntemi</b>, bir dizenin bir bölümünü çıkarır ve çıkarılan parçaları yeni bir dizede döndürür:</p>
+           <p><b>substr()</b> ile benzerdir <b>slice()</b>. Fark, ikinci parametrenin çıkarılan parçanın uzunluğunu belirtmesidir .</p>
+           <p id="demo7"></p>
+           <script>
+            let str6 =  "Apple, Banana, Kiwi";
+            document.getElementById("demo7").innerHTML = str.substr(7,6);
+             </script>
+             <hr>
+            <p>İkinci parametreyi atlarsanız <b>substr()</b>, dizenin geri kalanını kesecektir.</p>
+            <p id="demo8"></p>
+            <script>
+                let str7 = "Apple, Banana, Kiwi";
+                document.getElementById("demo8").innerHTML = str7.substr(7);
+                </script>
+                <hr>
+                <p>İlk parametre negatifse, konum dizenin sonundan itibaren sayılır.</p>
+                <p id="demo9"></p>
+                <script>
+                    let str8 = "Apple, Banana, Kiwi";
+                    document.getElementById("demo9").innerHTML = str8.substr(-4);
+                </script>
+                <hr>
+                <h2>Dize İçeriğini Değiştirme</h2>
+               <p><b>replace()Yöntem</b>, bir dizi bir başka değeriyle belirtilen bir değer yerine geçer:</p> 
+               <p>replace()Yöntemi denir dize değişmez. Yeni bir dize döndürür.</p>
+                <p>Aşağıdaki paragrafta "Microsoft"u "Google" ile değiştirin:</p>
+                <button onclick="myFunction()">Tıklayın!</button>
+                <p id="demo10">Lütfen Microsoft'u ziyaret edin!</p>
+                <script>
+                    function myFunction() {
+                        let str9 = document.getElementById("demo10").innerHTML;
+
+                        document.getElementById("demo10").innerHTML = str9.replace("Microsoft", "Google");
+                    }
+                </script>
+                <p>Varsayılan olarak, replace()yöntem büyük/küçük harf duyarlıdır. MICROSOFT (büyük harfle) yazmak işe yaramaz:</p>
+                <hr>
+                <p>Vaka duyarsız değiştirmek için bir kullanma düzenli ifade bir ile <b>/i</b> bayrak (duyarsız):</p>
+                <button onclick="myFunction1()">Deneyin!</button>
+                <p id="demo11">Lütfen Microsoft'u ziyaret edin!</p>
+                <script>
+                    function myFunction1() {
+                        let str10 = document.getElementById("demo11").innerHTML;
+                        document.getElementById("demo11").innerHTML = str10.replace(/MICROSOFT/i,"Google");
+
+                    }
+                </script>
+                <hr>
+                <p>Tüm eşleşmeleri değiştirmek için bayraklı normal bir ifade kullanın <b>/g</b> (genel eşleşme):</p>
+                <p>Aşağıdaki paragrafta tüm "Microsoft" örneklerini "W3Schools" ile değiştirin:</p>
+                <button onclick="myFunction2()">Deneyin!</button>
+                <p id="demo12">Lütfen  Microsoft  ve Microsoft'u ziyaret edin!</p>
+                <script>
+                    function myFunction2() {
+                 let str11 = document.getElementById("demo12").innerHTML;
+                 document.getElementById("demo12").innerHTML = str11.replace(/Microsoft/g, "Google");
+                    }
+                </script>
+                <hr>
+                <h2>Büyük ve Küçük Harfe Dönüştürme</h2>
+                <p>Dizeyi büyük harfe dönüştürün:</p>
+                <button onclick="myFunction3()">Deneyin</button>
+                <p id="demo13">Merhaba Dünya!!</p>
+                <script>
+                    function myFunction3() {
+                        let str12 = document.getElementById("demo13").innerHTML;
+                        document.getElementById("demo13").innerHTML = str12.toUpperCase();
+                    }
+                </script>
+                <hr>
+                <p>Dizeyi küçük harfe dönüştürün:</p>
+                <button onclick="myFunction4()">Deneyin</button>
+                <p id="demo14">Merhaba Dünya!!</p>
+                <script>
+                    function myFunction4() {
+                        let str13 = document.getElementById("demo14").innerHTML;
+                        document.getElementById("demo14").innerHTML = str13.toLowerCase();
+                    }
+                </script>
+                <hr>
+                <h2>concat() Yöntemi</h2>
+                <p><b>concat()</b> iki veya daha fazla dizeyi birleştirir:</p>
+                <p id="demo15">Merhaba Dünya!!</p>
+                <script>
+                    let text2 = "Merhaba";
+                    let text3 = "Dünya!!";
+                    let text4 = text2.concat(" ",text3);
+                    document.getElementById("demo15").innerHTML = text4;
+                </script>
+                <hr>
+                <h2>String.trim() Yöntemi</h2>
+                <p><b>trim() yöntem</b>, kaldırır bir dize her iki tarafından whitespace:</p>
+                <p>Kaldırılan boşlukla dizeyi uyarmak için düğmeye tıklayın.</p>
+                <button onclick="myFunction5()">Deneyin!!</button>
+                <script>
+                    function myFunction5() {
+                        let text5 = "     Merhaba Dünya!!";
+                      alert(text5.trim());
+                    }
+                </script>
+                <hr>
+                <p><b>padStart() yöntemi</b>, bir dizeyi başka bir dizeyle doldurur:</p>
+                <p id="demo16"></p>
+                <script>
+                    let text6 = "5";
+                    document.getElementById("demo16").innerHTML = text6.padStart(4,0);
+                </script>
+                <hr>
+                <p><b>padEnd() yöntemi,</b> bir dizeyi başka bir dizeyle doldurur:</p>
+                <p id="demo17"></p>
+                <script>
+                    let text7 = "5";
+                    document.getElementById("demo17").innerHTML = text7.padEnd(4,0);
+                </script>
+                <hr>
+                <h2>charAt() Yöntemi</h2>
+                <p><b>charAt()Yöntem</b>, bir dizedeki belirtilen endeksi (konum) karakteri döndürür:</p> 
+                <p id="demo18"></p>
+                <script>
+                    var text8 = "MERHABA DÜNYA!!!";
+                    document.getElementById("demo18").innerHTML = text8.charAt(0);
+                </script>
+                 <hr>
+                 <h2>charCodeAt() Yöntemi</h2>
+                 <p><b>charCodeAt() Yöntemi</b>, bir dizede belirtilen dizindeki karakterin unicode döndürür:</p> 
+                 <p id="demo19"></p>
+                 <script>
+                     let text9 = "MERHABA DÜNYA!!!";
+                     document.getElementById("demo19").innerHTML = text9.charCodeAt(0);
+                 </script>
+                 <hr>
+                 <h2>Mülk Erişimi</h2>
+                 <p>ECMAScript 5 (2009), dizelerde [ ] özelliğine erişime izin verir:</p> 
+                 <p id="demo20"></p>
+                 <script>
+                     let text10 = "MERHABA DÜNYA!!!";
+                     document.getElementById("demo20").innerHTML = text10[0];
+                 </script>
+                 <hr>
+                 <p>ES5 (2009), dizelerde özellik erişimine izin verir. Ama sadece okuyun:</p> 
+                 <p id="demo21"></p>
+                 <script>
+                     let text11 = "MERHABA DÜNYA!!!";
+                     text11[0] = "A";
+                     document.getElementById("demo21").innerHTML = text11;
+                 </script>
+                  <hr>
+                  <p>Bir dize bölünmesinden sonra ilk dizi öğesini görüntüleyin:</p>
+                  <p id="demo22"></p>
+                  <script>
+                      let text12 = "a,b,c,d,e,f";
+                      const myArray  = text12.split(",");
+                      document.getElementById("demo22").innerHTML = myArray[0];
+                  </script>
+                   <hr>
+                   <h2>String.split()'i kullanma:</h2>
+                   <p id="demo23"></p>
+                   <script>
+                       let text13 = "Merhaba";
+                       const myArr = text13.split("");
+                       text13 = "";
+                       for  (let i = 0; i <myArr.length; i++) {
+                           text13 += myArr[i] + "<br>"
+                       }
+                       document.getElementById("demo23").innerHTML = text13;
+                   </script>
+
+            </body>
+</html>
+<!--
+ String Parts (Dize Parçalarını Çıkarma):
+
+slice(start, end) = Slice() yöntemi, bir dizenin bir bölümünü çıkarır ve çıkarılan parçaları yeni bir dizede döndürür.
+substring(start, end) = Substring() yöntemi,bir dizenin bir bölümünü çıkarır ve çıkarılan parçaları yeni bir dizede döndürür.
+substr(start, length) = Substr() yöntemi,bir dizenin bir bölümünü çıkarır ve çıkarılan parçaları yeni bir dizede döndürür.
+replace() = Replace() yöntemi,bir dizi bir başka değeriyle belirtilen bir değer yerine geçer.
+toUpperCase() = Bir dizeyi büyük harfe dönüştürülür.
+toLowerCase() = Bir dizeyi küçük harfe dönüştürülür.
+concat() = İki veya daha fazla dizeyi birleştirir.
+string.trim() = Kaldırılan boşlukla dizeyi uyarmak için kullanırır.
+padStart() = Bir dizeyi başka bir dizeyle doldurur.
+padEnd() = Bir dizeyi başka bir dizeyle doldurur.
+charAt() = Bir dizedeki belirtilen endeksi (konum) karakteri döndürür.
+charCodeAt() =  Bir dizede belirtilen dizindeki karakterin unicode döndürür.
+split() = Bir dize, şu split()yöntemle bir diziye dönüştürülebilir.
+-->

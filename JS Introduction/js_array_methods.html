@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Dizileri Dizelere Dönüştürme</h2>
+        <h3>toString()</h3>
+        <p>toString() yöntemi, bir diziyi virgülle ayrılmış bir dize olarak döndürür:</p>
+        <p id="demo"></p>
+        <script>
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo").innerHTML = fruits.toString();
+        </script>
+        <hr>
+        <h3>join() yöntemi</h3>
+        <p>Join() yöntemi, dizi öğelerini bir dizede birleştirir.</p>
+        <p>Bu örnekte " * " öğelerini ayırıcı olarak kullandık:</p>
+        <p id="demo1"></p>
+        <script>
+            const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo1").innerHTML = fruits1.join(" * ");
+        </script>
+        <hr>
+        <h3>pop() yöntemi</h3>
+        <p>pop()Yöntem, bir dizi son öğesini kaldırır:</p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+
+        <script>
+            const fruits2 = ["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo2").innerHTML = fruits2;
+            fruits2.pop();
+            document.getElementById("demo3").innerHTML = fruits2;
+        </script>
+        <hr>
+        <h3>push() yöntemi</h3>
+        <p>push() yöntemi, bir diziye yeni bir öğe ekler:</p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+
+        <script>
+            const fruits3 = ["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo4").innerHTML = fruits3;
+            fruits3.push("Kiwi");
+            document.getElementById("demo5").innerHTML = fruits3;
+        </script>
+        <hr>
+        <p>push() yöntemi, yeni dizi uzunluğunu döndürür:</p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+
+        <script>
+             const fruits4 = ["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo6").innerHTML = fruits4.push("Kiwi");
+            document.getElementById("demo7").innerHTML = fruits4;
+        </script>
+        <hr>
+        <h3>shift() yöntemi</h3>
+        <p>shift()Yöntem, birinci dizi elemanı ve "vardiya" daha düşük bir dizin için tüm diğer elemanları ortadan kaldırır.</p>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+        <script>
+        const fruits5 = ["Banana","Orange","Apple","Mango"];
+        document.getElementById("demo8").innerHTML = fruits5;
+        fruits5.shift();
+        document.getElementById("demo9").innerHTML = fruits5;
+        </script>
+        <hr>
+        <p>shift() yöntemi, kaydırılan öğeyi döndürür.</p>
+        <p id="demo10"></p>
+        <p id="demo11"></p>
+        <script>
+            const fruits6 =  ["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo10").innerHTML = fruits6.shift();
+            document.getElementById("demo11").innerHTML = fruits6;
+        </script>
+        <hr>
+        <h3>unshift() yöntem</h3>
+        <p>unshift() Yöntem, yeni bir (başlangıçta) bir dizi elemanı, ve "unshifts" eski eleman ekler:</p>
+        <p id="demo12"></p>
+        <p id="demo13"></p>
+        <script>
+            const fruits7 = ["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo12").innerHTML = fruits7;
+            fruits7.unshift("Lemon");
+            document.getElementById("demo13").innerHTML = fruits7;
+        </script>
+        <hr>
+        <p>unshift() yöntemi, yeni dizinin uzunluğunu döndürür:</p>
+        <p id="demo14"></p>
+        <p id="demo15"></p>
+        <script>
+            const fruits8 = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo14").innerHTML = fruits8.unshift("Lemon");
+            document.getElementById("demo15").innerHTML = fruits8;
+        </script>
+        <hr>
+        <p>Dizi öğelerine, dizin numaraları kullanılarak erişilir:</p>
+       <p id="demo16"></p>
+       <p id="demo17"></p>
+       <script>
+           const fruits9 = ["Banana", "Orange", "Apple", "Mango"];
+           document.getElementById("demo16").innerHTML = fruits9;
+           fruits9[0] = "Kiwi";
+           document.getElementById("demo17").innerHTML = fruits9;
+      </script>
+      <hr>
+      <p>length özelliği, push() yöntemini kullanmadan bir diziye yeni öğeler eklemenin kolay bir yolunu sağlar:</p>
+      <p id="demo18"></p>
+      <p id="demo19"></p>
+      <script>
+       const fruits10 = ["Banana", "Orange", "Apple", "Mango"];
+       document.getElementById("demo18").innerHTML = fruits10;
+       fruits10[fruits10.length] = "Kiwi";
+       document.getElementById("demo19").innerHTML = fruits10;
+      </script>
+      <hr>
+      <h3>Delete yöntemi</h3>
+      <p>Öğeleri silmek, dizide tanımsız delikler bırakır:</p>
+      <p id="demo20"></p>
+      <p id="demo21"></p>
+      <script>
+          const fruits11 = ["Banana", "Orange", "Apple", "Mango"];
+          document.getElementById("demo20").innerHTML = "İlk meyve:" + fruits11[0];
+          delete fruits11[0];
+          document.getElementById("demo21").innerHTML = "İlk meyve:" + fruits11[0];
+      </script>
+      <hr>
+      <h3>splice() yöntemi</h3>
+      <p>splice() yöntemi, bir diziye yeni öğeler ekler:</p>
+      <p id="demo22"></p>
+      <p id="demo23"></p>
+      <script>
+          const fruits12 = ["Banana", "Orange", "Apple", "Mango"];
+          document.getElementById("demo22").innerHTML = fruits12;
+          fruits12.splice(2, 0, "Lemon", "Kiwi");
+          document.getElementById("demo23").innerHTML = fruits12;
+      </script>
+      <hr>
+      <p>splice() yöntemi, bir diziye yeni öğeler ekler ve silinmiş öğeleri (varsa) içeren bir dizi döndürür:</p>
+      <p id="demo24"></p>
+      <p id="demo25"></p>
+      <p id="demo26"></p>
+      <script>
+          const fruits13 = ["Banana", "Orange", "Apple", "Mango"];
+          document.getElementById("demo24").innerHTML = "Orijinal Dizi:<br>" + fruits13;
+          let removed = fruits13.splice(2,2,"Lemon","Kiwi");
+          document.getElementById("demo25").innerHTML = "Yeni Dizi:<br>" + fruits13;
+          document.getElementById("demo26").innerHTML = "Kaldırılan Öğeler:<br>" + removed;
+      </script>
+      <hr>
+      <h3>Öğeleri Kaldırmak için splice() kullanma</h3>
+      <p>Ekleme() yöntemleri, dizi öğelerini kaldırmak için kullanılabilir:</p>
+      <p id="demo27"></p>
+      <p id="demo28"></p>
+      <script>
+          const fruits14 =  ["Banana", "Orange", "Apple", "Mango"];
+          document.getElementById("demo27").innerHTML = fruits14,
+          fruits14.splice(0,1);
+          document.getElementById("demo28").innerHTML = fruits14;
+      </script>
+      <hr>
+      <h3>Dizileri Birleştirme (Birleştirme)</h3>
+      <p>concat()Yöntem, mevcut dizileri birleştirme (birleştirerek) ile yeni bir dizi oluşturur:</p>
+      <p id="demo29"></p>
+      <script>
+          const myGirls = ["Ayşe","Fatma","Tuba"];
+          const myBoys = ["Ali","Ömer"];
+          const myChildren = myGirls.concat(myBoys);
+
+          document.getElementById("demo29").innerHTML = myChildren;
+      </script>
+      <hr>
+      <p>concat() yöntemi dizileri birleştirir (birleştirir):</p>
+      <p id="demo30"></p>
+      <script>
+          const array1 = ["Cemile","Kübra"];
+          const array2 = ["Osman","Mehmet"];
+          const array3 = ["Çiçek","İkram"];
+
+          const myChildren1 = array1.concat(array2,array3);
+
+          document.getElementById("demo30").innerHTML = myChildren1;
+      </script>
+      <hr>
+      <p>concat() yöntemi, dize değerlerini dizilerde birleştirebilir:</p>
+      <p id="demo31"></p>
+      <script>
+          const myArray = ["Emil","Tobias","Linus"];
+          const myChildren2 = myArray.concat("Peter");
+
+          document.getElementById("demo31").innerHTML = myChildren2;
+      </script>
+      <hr>
+      <h3>Dizi Dilimleme</h3>
+      <p>slice()Yöntemi, yeni diziye bir dizinin bir parçasını dilimler.</p>
+      <p>slice()Yöntem, yeni bir dizi oluşturur. Kaynak diziden hiçbir öğeyi kaldırmaz.</p>
+      <p>Bu örnek, dizi öğesi 1'den ("Turuncu") başlayarak bir dizinin bir bölümünü dilimler halinde çıkarır:</p>
+      <p id="demo32"></p>
+      <script>
+          const fruits15 = ["Banana","Orange","Lemon","Apple","Mango"];
+          const citrus = fruits15.slice(1);
+          document.getElementById("demo32").innerHTML = fruits15 + "<br><br>" + citrus;
+      </script>
+      <hr>
+      <p>Bu örnek, dizi öğesi 3'ten ("Apple") başlayarak bir dizinin bir bölümünü dilimler.</p>
+      <p id="demo33"></p>
+      <script>
+      const fruits16 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+      const citrus1 = fruits16.slice(3);
+      document.getElementById("demo33").innerHTML = fruits16 + "<br><br>" + citrus1;
+      </script>
+      <hr>
+      <p>slice()Yöntem gibi iki argüman alabilir slice(1, 3).</p>
+      <p>Slice() yöntemine iki bağımsız değişken verildiğinde, başlangıç ​​bağımsız değişkeninden ve bitiş bağımsız değişkenine kadar (ancak dahil edilmemiş) dizi öğelerini seçer:</p>
+      <p id="demo34"></p>
+      <script>
+      const fruits17 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+      const citrus2 = fruits17.slice(1,3);
+      document.getElementById("demo34").innerHTML = fruits17 + "<br><br>" + citrus2;
+      </script>
+      <hr>
+      <h3>Otomatik toString()</h3>
+      <p>toString() yöntemi, bir diziyi virgülle ayrılmış bir dize olarak döndürür:</p>
+      <p id="demo35"></p>
+      <script>
+      const fruits18 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo35").innerHTML = fruits18.toString();
+      </script>
+      <hr>
+      <p>JavaScript, basit bir değer beklendiğinde bir diziyi otomatik olarak virgülle ayrılmış bir dizeye dönüştürür:</p>
+      <p id="demo36"></p>
+      <script>
+      const fruits19 = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo36").innerHTML = fruits19;
+      </script>
+
+
+        
+
+    
+    </body>
+</html>

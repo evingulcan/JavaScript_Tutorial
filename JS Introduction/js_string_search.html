@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<hml>
+    <body>
+        <h2 style="text-align: center;">JavaScript Dize Yöntemleri</h2>
+        <h2>indexOf() yöntemi</h2>
+        <p><b>indexOf() yöntemi</b>, belirtilen bir metnin ilk oluşumunun konumunu döndürür:</p>
+        <p>JavaScript, konumları sıfırdan sayar.0, bir dizedeki ilk konum, 1 ikinci, 2 üçüncü ..</p>
+        <p id="demo"></p>
+        <script>
+         let str ="Lütfen 'bulun' işleminin nerede gerçekleştiğini bulun!";
+         document.getElementById("demo").innerHTML = str.indexOf("bul");
+        </script>
+        <hr>
+        <h2>lastIndexOf() yöntemi</h2>
+        <p><b>lastIndexOf() yöntemi</b>, belirtilen bir metnin son oluşumunun konumunu döndürür:</p>
+        <p id="demo1"></p>
+        <script>
+            let str1 = "Lütfen 'bulun' işleminin nerede gerçekleştiğini bulun!";
+            document.getElementById("demo1").innerHTML = str1.lastIndexOf("bul");
+        </script>
+        <hr>
+        <p>Her ikisi <b>indexOf()</b> ve <b>lastIndexOf()</b> metin bulunamazsa -1 döndürür:</p>
+        <p id="demo2"></p>
+        <script>
+            let str2 = "Lütfen 'bulun' işleminin nerede gerçekleştiğini bulun!";
+            document.getElementById("demo2").innerHTML = str2.indexOf("Evin");
+        </script>
+        <hr>
+        <p>Her iki yöntem de arama için başlangıç ​​konumu olarak ikinci bir parametreyi kabul eder:</p>
+        <p><b>indexOf() yöntemi</b>, arama için başlangıç ​​konumu olarak ikinci bir parametreyi kabul eder:</p>
+        <p id="demo3"></p>
+        <script>
+           let str3 = "Lütfen 'bulun' işleminin nerede gerçekleştiğini bulun!";
+           document.getElementById("demo3").innerHTML = str3.indexOf("bul", 15);  
+        </script>
+        <hr>
+        <p><b>lastIndexOf() yöntemi</b>, arama için başlangıç ​​konumu olarak ikinci bir parametreyi kabul eder.</p>
+        <p>lastIndexOf() yönteminin geriye doğru arama yaptığını unutmayın, bu nedenle 15. konum, aramayı 15. konumdan başlatmak ve baştan arama yapmak anlamına gelir.</p>
+        <p>15. konum, baştan itibaren 15. konumdur.</p>
+        <p id="demo4"></p>
+        <script>
+            let str4 = "Lütfen 'bulun' işleminin nerede gerçekleştiğini bulun!";
+            document.getElementById("demo4").innerHTML = str4.lastIndexOf("bul", 15);
+        </script>
+        <hr>
+        <h2>search()Yöntem</h2>
+        <p><b>search()Yöntem</b> arar belirtilen değer ve getiri maçın pozisyonu için bir dize:</p>
+        <p><b>search() yöntemi</b>, bir dizede belirtilen metnin ilk oluşumunun konumunu döndürür:</p>
+        <p id="demo5"></p>
+        <script>
+         let str5 = "Lütfen 'bulun' işleminin nerede gerçekleştiğini bulun!";
+            document.getElementById("demo5").innerHTML = str5.search("bul");
+        </script>
+        <hr>
+        <p><strong>Not:</strong>İki yöntem indexOf() ve search() EŞİT DEĞİLDİR.</p>
+        <p><strong>Farkları:</strong></p>
+        <p><strong>search()</strong> Yöntem ikinci başlangıç konumu argüman alamaz.</p>
+        <p><strong>indexOf()</strong> Yöntem güçlü arama değerleri (düzenli ifadeler) alamaz.</p>
+        <hr>
+        <h2>String.match()</h2>
+        <p><b>match() yöntemi</b>, bir normal ifadeyle eşleşme için bir dize arar ve eşleşmeleri bir Array nesnesi olarak döndürür.</p>
+        <p>"ain" için bir dize arayın:</p>
+        <p id="demo6"></p>
+        <script>
+            let str6 = "The rain in SPAIN stays mainly in the plain"; 
+            document.getElementById("demo6").innerHTML = str6.match(/ain/g);
+        </script>
+        <hr>
+        <p>"ain" için genel, büyük/küçük harfe duyarsız bir arama yapın:</p>
+        <p id="demo7"></p>
+        <script>
+            let str7 = "The rain in SPAIN stays mainly in the plain"; 
+            document.getElementById("demo7").innerHTML = str7.match(/ain/gi);
+        </script>
+        <hr>
+        <h2>String.includes()</h2>
+        <p><b>includes()</b>, Bir dize belirli bir değer içeriyorsa yöntem true döndürür.</p>
+        <p>Bir dizenin "world" içerip içermediğini kontrol edin:</p>
+        <p id="demo8"></p>
+        <p>include() yöntemi, Internet Explorer'da desteklenmez.</p>
+        <script>
+            let str8 = "Hello world, welcome to the universe.";
+            document.getElementById("demo8").innerHTML = str8.includes("world");
+        </script>
+        <hr>
+        <p>Aramaya 12. konumdan başlayarak bir dizenin "dünya" içerip içermediğini kontrol edin:</p>
+        <p id="demo9"></p>
+        <script>
+            let str9 = "Hello world, welcome to the universe.";
+            document.getElementById("demo9").innerHTML = str9.includes("world",12);
+        </script> 
+        <hr>
+        <h2>String.startsWith()</h2>
+        <p><b>startsWith()</b> Metot bize true bir dize aksi takdirde belirli bir değere sahip başlıyorsa false:</p>
+        <p>Bir dizenin "Hello" ile başlayıp başlamadığını kontrol edin:</p>
+        <p id="demo10"></p>
+        <p>startWith() yöntemi, Internet Explorer'da desteklenmez.</p>
+        <script>
+             let str10 = "Hello world, welcome to the universe.";
+            document.getElementById("demo10").innerHTML = str10.startsWith("Hello");
+        </script>
+        <hr>
+        <p id="demo11"></p>
+        <script>
+             let str11 = "Hello world, welcome to the universe.";
+            document.getElementById("demo11").innerHTML = str11.startsWith("world", 6);
+        </script>
+        <hr>
+        <h2>String.endsWith()</h2>
+        <p><b>endsWith()</b> Metot bize true Belirtilen değere sahip bir dize biter, aksi takdirde false:</p>
+        <p>Bir dizenin "Doe" ile bitip bitmediğini kontrol edin:</p>
+        <p id="demo12"></p>
+        <script>
+            let str12 = "John Doe";
+            document.getElementById("demo12").innerHTML = str12.endsWith("Doe");
+        </script>
+        <hr>
+        <p>"world" ile biten bir dizenin ilk 11 karakterini kontrol edin:</p>
+        <p id="demo13"></p>
+        <script>
+            let str13 = "Hello world, welcome to the universe.";
+            document.getElementById("demo13").innerHTML = str13.endsWith("world", 11);
+        </script>
+    </body>
+</hml>
+<!--
+indexOf() = Belirtilen bir metnin ilk oluşumunun konumunu döndürür.
+lastIndexOf() = Belirtilen bir metnin son oluşumunun konumunu döndürür.
+search() = Bir dizede belirtilen metnin ilk oluşumunun konumunu döndürür.
+includes() = Bir dize belirli bir değer içeriyorsa yöntem true döndürür.
+startsWith() = Metot bize true bir dize aksi takdirde belirli bir değere sahip başlıyorsa false.
+endsWith() = Metot bize true Belirtilen değere sahip bir dize biter, aksi takdirde false.
+
+
+-->

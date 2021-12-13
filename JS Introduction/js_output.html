@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>innerHTML Kullanımı</h2>
+         <p>Bir HTML öğesini yazma</p>
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("demo").innerHTML = 5 + 6;
+        </script>
+
+        <hr>
+
+        <h2>document.write() Kullanımı</h2>
+        <p>HTML çıktısına yazma</p>
+        <p>Belgenin yüklenmesi tamamlandıktan sonra asla document.write'ı çağırmayın. Tüm belgenin üzerine yazacaktır.</p>
+        <script>
+            document.write(9 + 6);
+        </script>
+
+        <hr>
+          
+        <h2>window.alert() Kullanımı</h2>
+        <p>Bir uyarı kutusuna yazma</p>
+        <script>window.alert(7 + 9);
+        </script>
+
+          <hr>
+
+          <h2>console.log() Hata Ayıklamayı Etkinleştir</h2>
+          <p>Klavyenizdeki F12 hata ayıklamayı etkinleştirir.</p>
+          <p>Ardından hata ayıklayıcı menüsünde "Konsol"u seçin.</p>
+          <p>Ardından tekrar Çalıştır'ı tıklayın.</p>
+          <script>
+              console.log(4 + 10);
+          </script>
+
+          <hr>
+          
+          <h2>window.print() Yöntemi</h2>
+          <p>Geçerli sayfayı yazdırmak için düğmeye tıklayın.</p>
+          <button onclick="window.print()">Bu sayfayı yazdır</button>
+    </body>
+</html>
+<!--
+    innerHTML = Bir HTML öğesini yazma
+    document.write() = HTML çıktısına yazma.Document.write() yöntemi yalnızca test için kullanılmalıdır.
+    window.alert() = Bir uyarı kutusuna yazma.Verileri görüntülemek için bir uyarı kutusu kullanabilirsiniz:
+    console.log() = Tarayıcı konsolune yazma.Hata ayıklama amacıyla, console.log()verileri görüntülemek için tarayıcıdaki yöntemi çağırabilirsiniz .
+    window.print() = Gecerli pencerenin içeriğini yazdırmak için tarayıcıdaki yöntemi çağırabilmenizdir.
+-->

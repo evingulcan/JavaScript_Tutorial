@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Iterables</h2>
+    <p><b>for..of</b> Bir dizenin öğelerini yinelemek için bir döngü kullanabilirsiniz :</p>
+    <p>Bir Dize üzerinde yineleyin:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // Bir Dize Oluştur
+        const name = "W3Schools";
+
+        // Tüm Öğeleri Listele
+        let text = ""
+        for (const x of name) {
+            text += x + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <hr>
+    <p>Bir Dizi üzerinde yineleme yapın:</p>
+
+    <p id="demo1"></p>
+
+    <script>
+        // aa Dizisi oluştur
+        const letters = ["a", "b", "c"];
+
+        // Tüm Elemanları Listele
+        let text1 = "";
+        for (const y of letters) {
+            text1 += y + "<br>";
+        }
+
+        document.getElementById("demo1").innerHTML = text1;
+    </script>
+    <hr>
+    <p>Bir Küme üzerinde yineleme:</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        // Bir Küme Oluştur
+        const letters1 = new Set(["a", "b", "c"]);
+
+        // Tüm Elemanları Listele
+        let text2 = "";
+        for (const a of letters1) {
+            text2 += a + "<br>";
+        }
+
+        document.getElementById("demo2").innerHTML = text2;
+    </script>
+    <hr>
+    <p>Bir Harita üzerinde yineleyin:</p>
+
+    <p id="demo3"></p>
+
+    <script>
+        // Harita Oluştur
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+
+       // Tüm Girişleri Listele
+        let text3 = "";
+        for (const b of fruits) {
+            text3 += b + "<br>";
+        }
+
+        document.getElementById("demo3").innerHTML = text3;
+    </script>
+
+</body>
+
+</html>

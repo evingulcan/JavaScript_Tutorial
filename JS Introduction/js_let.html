@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Var Kullanarak Bir Değişkeni Yeniden Bildirmek</h2>
+    <p><b>var</b> Anahtar kelimeyi kullanarak bir değişkeni yeniden bildirmek, sorunlara neden olabilir.</p>
+    <p>Bir blok '{ }' içindeki bir değişkeni yeniden bildirmek, değişkeni bloğun dışında da yeniden bildirir:</p>
+    <p id="demo"></p>
+
+
+    <script>
+        var x = 10;
+
+        // Burada x 10'dir
+
+        {
+            var x = 2;
+
+            // Burada x 2'dir
+        }
+
+
+        // Burada x 2'dir
+        document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <hr>
+
+    <h2>Let Kullanarak Değişkeni Yeniden Bildirmek</h2>
+    <p><b>let</b> Anahtar kelimeyi kullanarak bir değişkeni yeniden bildirmek bu sorunu çözebilir.</p>
+    <p>Bir blok '{ }' içindeki bir değişkeni yeniden bildirmek, değişkeni bloğun dışında yeniden bildirmez:</p>
+    <p id="dem"></p>
+    <script>
+        let y = 10;
+        // Burada y 10'dir
+        {
+            let y = 2;
+            // Burada y 2'dir
+        }
+
+        // Burada y 10'dir
+        document.getElementById("dem").innerHTML = y;
+    </script>
+
+    <hr>
+    
+    <p>Bir programda herhangi bir yerde bir JavaScript değişkeninin <b>var</b> ile yeniden bildirilmesine İZİN VERİLİR:</p>
+    <p id="emo"></p>
+    <script>
+        var z = 2;
+        var z = 3;
+        document.getElementById("emo").innerHTML = z;
+    </script>
+      
+      <hr>
+       
+      <p><b>let ile</b>, başka bir kapsamda veya başka bir blokta bir değişkenin yeniden bildirilmesine İZİN VERİLİR:</p>
+      <p id="dev"></p>
+      <script>
+          let t = 4;
+          {
+              let t = 5;
+          }
+
+          {
+              let t = 6;
+          }
+          document.getElementById("dev").innerHTML = t;
+      </script>
+
+          <hr>
+           <h2>JavaScript Kaldırma</h2>
+          <p><b>var</b> ile, bir değişkeni bildirilmeden önce kullanabilirsiniz:</p>
+          <p id="evo"></p>
+          <script>
+              carName = "Volvo";
+              document.getElementById("evo").innerHTML = carName;
+              var carName;
+          </script>
+           
+        <p><b>let</b> ile, bir değişken bildirilmeden önce kullanamazsınız.</p>   
+        <p id="evv"></p>
+        <script>
+            try {
+                carName = "Saab";
+                let carName = "Volvo";
+            }
+            catch(err) {
+                document.getElementById("evv").innerHTML = err;
+            }
+        </script>
+     
+</body>
+
+</html>

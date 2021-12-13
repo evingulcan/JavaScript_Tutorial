@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript İfadeleri</h2>
+        <p>Bir <b>JavaScript programı</b>, bir bilgisayar</p>
+        <p>Tarafından yürütülecek <b>ifadelerin</b> bir listesidir</p>
+        <p>JavaScript ifadeleri noktalı virgülle ayrılır.</p>
+        <p id="demo"></p>
+       <script>
+            let x,y,z;  //ifade 1
+            x = 5;      //ifade 2
+            y = 6;      //ifade 3
+            z = x+y;    //ifade 4
+
+            document.getElementById("demo").innerHTML = 
+            "z ' nin değeri " + z + " 'dir.";
+        </script>
+
+        <hr>
+
+        <p>HTML'de JavaScript ifadeleri tarayıcı tarafından yürütülür.</p>
+        <p id="dem"></p>
+        <script>
+            document.getElementById("dem").innerHTML = "Merhaba Evin.";
+        </script>
+    </body>
+</html>
+<!--
+ Operatörlerin ( = + - * / ) etrafına boşluk koymak iyi bir uygulamadır.
+ Bir kod satırını kırmak için en iyi yer, operatör veya virgülden sonradır
+ JavaScript ifadeleri, kod bloklarında, küme parantezleri {...} içinde gruplandırılabilir.
+ Kod bloklarının amacı, birlikte yürütülecek ifadeleri tanımlamaktır. 
+
+ JavaScript ifadeleri , gerçekleştirilecek JavaScript eylemini tanımlamak için genellikle bir anahtar sözcükle başlar:
+
+var = Bir değişken bildirir
+let = Bir blok değişkeni bildirir
+const =	Bir blok sabiti bildirir
+if = Bir koşulda yürütülecek bir ifade bloğunu işaretler
+switch = Farklı durumlarda yürütülecek bir ifade bloğunu işaretler
+for = Bir döngüde yürütülecek bir ifade bloğunu işaretler
+function =	Bir işlev bildirir
+return = Bir işlevden çıkar
+try = Bir ifade bloğuna hata işleme uygular
+-->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>The JavaScript typeof Operator</h2>
+
+    <p>typeof operatörü, bir değişkenin veya ifadenin türünü döndürür:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let y = "5";
+        let x = + y;
+
+        let z = "Evin";
+        let a = + z;
+
+        let b = 123;
+        document.getElementById("demo").innerHTML = typeof y + "<br>" +
+                                                    typeof x + "<br>" +
+                                                    typeof z + "<br>" +
+                                                    typeof a + "<br>" +
+
+                                                    String("---------------------")  + "<br>" +
+
+                                                    String(b) + "<br>" +
+                                                    String(123) + "<br>" +
+                                                    String(100 + 23) + "<br>" +
+                                                    
+                                                    String("---------------------")  + "<br>" +
+
+                                                    (5 + null) + "<br>" +
+                                                    ("5" + null) + "<br>" +
+                                                    ("5" + 2) + "<br>" +
+                                                    ("5" - 2) + "<br>" +
+                                                    ("5" * "2") + "<br>" +
+                                                    ("5" / "2");
+    </script>
+
+</body>
+
+</html>

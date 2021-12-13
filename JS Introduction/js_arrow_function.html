@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Function</h2>
+
+    <p>Arrow Function sözdizimi kullanılmadan bir işlevin sözdizimini gösterir.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var selam;
+
+        selam = function () {
+            return "Selam Dünya!";
+        }
+        document.getElementById("demo").innerHTML = selam();
+    </script>
+    <hr>
+    <p id="demo1"></p>
+    <script>
+        var dunya;
+        dunya = () => {
+            return "Selam Dünya!!!";
+        }
+        document.getElementById("demo1").innerHTML = dunya();
+    </script>
+    <hr>
+    <h3>Parametreli Arrow Fonksiyonu:</h3>
+    <p id="demo2"></p>
+    <script>
+        var hello;
+        hello = (val) => "Merhaba " + val;
+        document.getElementById("demo2").innerHTML = hello("Evren!");
+    </script>
+    <hr>
+    <h3>Parantezsiz Arrow İşlevi:</h3>
+    <p id="demo3"></p>
+    <script>
+        var evren;
+        evren = val => "Merhaba " + val;
+        document.getElementById("demo3").innerHTML = evren("Evren!");
+    </script>
+    <hr>
+    <h2>JavaScript "this"</h2>
+    <p>Bu örnek, normal bir işlevde, "this" anahtar sözcüğünün, işlevin nasıl çağrıldığına bağlı olarak farklı nesneleri
+        temsil ettiğini gösterir.</p>
+    <p>"Merhaba" işlevini yeniden yürütmek için düğmeye tıklayın ve bu sefer "bu"nun düğme nesnesini temsil ettiğini
+        göreceksiniz..</p>
+    <button id="btn">Beni Tıkla!</button>
+    <p id="demo4"></p>
+    <script>
+        var hello1;
+
+        // Normal İşlev:
+        hello1 = function () {
+            document.getElementById("demo4").innerHTML += this;
+        }
+
+        //Pencere nesnesi şu işlevi çağırır:
+        window.addEventListener("load", hello1);
+
+        //Bir düğme nesnesi şu işlevi çağırır:
+        document.getElementById("btn").addEventListener("click", hello1);
+    </script>
+    <hr>
+    <p>Bu örnek, Arrow Functions'da "this" anahtar sözcüğünün, işlevi kim çağırırsa çağırsın, işlevin sahibi olan nesneyi temsil ettiğini gösterir.</p>
+    <p>"Merhaba" işlevini yeniden yürütmek için düğmeye tıklayın ve "bu"nun hala pencere nesnesini temsil ettiğini göreceksiniz.</p>
+    <button id="btn1">Beni Tıkla!</button>
+    <p id="demo5"></p>
+    <script>
+        var hello2;
+
+       // Arrow Function:
+        hello2 = () => {
+            document.getElementById("demo5").innerHTML += this;
+        }
+
+         //Pencere nesnesi şu işlevi çağırır:
+        window.addEventListener("load", hello2);
+
+        //Bir düğme nesnesi şu işlevi çağırır:
+        document.getElementById("btn1").addEventListener("click", hello2);
+    </script>
+
+
+
+
+</body>
+
+</html>

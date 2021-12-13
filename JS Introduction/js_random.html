@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Math.random()</h2>
+
+    <p>Math.random() 0 (dahil) ile 1 (hariç) arasında rastgele bir sayı döndürür:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = Math.random();
+    </script>
+    <hr>
+    <p>Math.random()ile birlikte Math.floor()kullanılır, rastgele tamsayıları döndürmek için kullanılabilir.</p>
+    <p><strong>1-</strong> (Math.random() * 10), 0 ile 9 arasında (her ikisi de dahil) rastgele bir tamsayı döndürür:</p>
+    <p><strong>2-</strong> Math.floor(Math.random() * 11), 0 ile 10 arasında rastgele bir tamsayı döndürür (her ikisi de dahildir):</p>
+    <p><strong>3-</strong> Math.floor(Math.random() * 100)) 0 ile 99 arasında rastgele bir tamsayı döndürür (her ikisi de dahildir):</p>
+    <p><strong>4-</strong> Math.random() ile birlikte kullanılan Math.floor() * 101, 0 ile 100 arasında rastgele bir tamsayı döndürür (her ikisi de dahildir):</p>
+    <p><strong>5-</strong> Math.floor(Math.random() * 10) + 1) 1 ile 10 arasında rastgele bir tamsayı döndürür (her ikisi de dahildir):</p>
+    <p><strong>6-</strong> Math.floor(Math.random() * 100) + 1) 1 ile 100 arasında rastgele bir tamsayı döndürür (her ikisi de dahildir):</p>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = Math.floor(Math.random() * 10) + "<br>" +
+                                                     Math.floor(Math.random() * 11) + "<br>" +
+                                                     Math.floor(Math.random() * 100) + "<br>" +
+                                                     Math.floor(Math.random() * 101) + "<br>" +
+                                                     Math.floor((Math.random() * 10) + 1) + "<br>" +
+                                                     Math.floor((Math.random() * 100) + 1);
+    </script>
+    <hr>
+    <p>Düğmeye her tıkladığınızda, getRndInteger(min, max) 0 ile 9 arasında rastgele bir sayı döndürür (her ikisi de dahildir):</p>
+    <button onclick="document.getElementById('demo2').innerHTML = getRndInteger(0,10)">Tıkla</button>
+    <p id="demo2"></p>
+
+    <script>
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+    </script>
+    
+ 
+</body>
+
+</html>

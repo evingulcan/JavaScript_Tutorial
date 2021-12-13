@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2 style="text-align: center;">JavaScript Number Methods</h2>
+        <h3>toString() yöntemi</h3>
+        <p>toString() yöntemi, bir sayıyı bir dizgeye dönüştürür.</p>
+        <p id="demo"></p>
+        <script>
+         let x = 123;
+         document.getElementById("demo").innerHTML = x.toString() + "<br>" +
+                                                    (123).toString() + "<br>" +
+                                                    (100 + 23).toString();
+                                                    
+      </script>
+      <hr>
+      <h3>toExponential() Yöntemi</h3>
+      <p>toExponential() yöntemi, sayı yuvarlanmış ve üstel gösterim kullanılarak yazılmış bir dize döndürür.</p>
+      <p>İsteğe bağlı bir parametre, ondalık noktanın arkasındaki basamak sayısını tanımlar.</p>
+      <p id="demo1"></p>
+      <script>
+          let y = 9.656;
+          document.getElementById("demo1").innerHTML = 
+          y.toExponential() + "<br>" +
+          y.toExponential(2) + "<br>" +
+          y.toExponential(4) + "<br>" +
+          y.toExponential(6);
+      </script>
+      <hr>
+      <h3>toFixed() Yöntemi</h3>
+      <p>toFixed() yöntemi, bir sayıyı belirli sayıda basamağa yuvarlar.</p>
+      <p>Parayla çalışmak için toFixed(2) mükemmeldir.</p>
+      <p id="demo2"></p>
+      <script>
+          let z = 9.656;
+          document.getElementById("demo2").innerHTML = 
+          z.toFixed(0) + "<br>" +
+          z.toFixed(2) + "<br>" +
+          z.toFixed(4) + "<br>" +
+          z.toFixed(6);
+      </script>
+      <hr>
+      <h3>toPrecision() Yöntemi</h3>
+      <p>toPrecision() yöntemi, belirtilen uzunlukta yazılmış bir sayı ile bir dize döndürür:</p>
+      <p id="demo3"></p>
+      <script>
+          let a = 9.656;
+          document.getElementById("demo3").innerHTML = 
+          a.toPrecision() + "<br>" +
+          a.toPrecision(2) + "<br>" +
+          a.toPrecision(4) + "<br>" +
+          a.toPrecision(6);
+      </script>
+      <hr>
+      <h3>valueOf() Yöntemi</h3>
+      <p>valueOf() yöntemi, sayı olarak bir sayı döndürür:</p>
+      <p id="demo4"></p>
+      <script>
+          let b = 123;
+          document.getElementById("demo4").innerHTML = 
+          b.valueOf() + "<br>" +
+          (123).valueOf() + "<br>" +
+          (100+23).valueOf();
+      </script>
+      <hr>
+      <h2 style="text-align: center;">Değişkenleri Sayılara Dönüştürme</h2>
+       <h3>Number() Yöntemi</h3>
+       <p>Number() yöntemi, değişkenleri sayılara dönüştürür:</p>
+       <p id="demo5"></p>
+       <script>
+           document.getElementById("demo5").innerHTML = 
+           Number(true) + "<br>" +
+           Number(false) + "<br>" +
+           Number("10") + "<br>" +
+           Number(" 10") + "<br>" +
+           Number("10 ") + "<br>" +
+           Number(" 10 ") + "<br>" +
+           Number("10.33") + "<br>" +
+           Number("10,33") + "<br>" +
+           Number("10 33") + "<br>" +
+           Number("Evin");
+       </script>
+       <p><b>Not:</b>Numara dönüştürülemiyorsa, NaN(Sayı Değil) döndürülür.</p>
+       <hr>
+       <p>Number() yöntemi, bir tarihi sayıya dönüştürebilir:</p>
+       <p id="demo6"></p>
+       <script>
+           let c = new Date("1970-01-01");
+           document.getElementById("demo6").innerHTML = Number(c);
+       </script>
+       <hr>
+       <p>Number()Yöntem 1.1.1970 den beri milisaniye sayısını döndürür.</p>
+       <p>1970-01-02 ve 1970-01-01 arasındaki milisaniye sayısı 86400000:</p>
+       <p id="demo7"></p>
+       <script>
+        let d = new Date("1970-01-02");
+        document.getElementById("demo7").innerHTML = Number(d); 
+        </script>
+        <hr>
+        <h3>parseInt() Yöntemi</h3>
+        <p>parseInt()bir dizeyi ayrıştırır ve bir tam sayı döndürür. Boşluklara izin verilir. Yalnızca ilk sayı döndürülür:</p>
+        <p id="demo8"></p>
+        <script>
+            document.getElementById("demo8").innerHTML = 
+              parseInt("-10") + "<br>" +
+              parseInt("-10.33") + "<br>" +
+              parseInt("10") + "<br>" +
+              parseInt("10.33") + "<br>" +
+              parseInt("10 6") + "<br>" +  
+              parseInt("10 years") + "<br>" +  
+              parseInt("years 10");  
+            </script>
+            <hr>
+            <h3>parseFloat() Yöntemi</h3>
+            <p>parseFloat()bir dizeyi ayrıştırır ve bir sayı döndürür. Boşluklara izin verilir. Yalnızca ilk sayı döndürülür:</p>
+            <p id="demo9"></p>
+            <script>
+                document.getElementById("demo9").innerHTML = 
+                  parseFloat("10") + "<br>" +
+                  parseFloat("10.33") + "<br>" +
+                  parseFloat("10 6") + "<br>" +  
+                  parseFloat("10 years") + "<br>" +
+                  parseFloat("years 10");    
+            </script>
+                <hr>
+                <h2>Sayı Özellikleri</h2>
+                <h3>MAX_VALUE</h3>
+                <p>MAX_VALUE, JavaScript'te mümkün olan en büyük sayıyı döndürür.</p>
+                <p id="demo10"></p>
+                <script>
+                    let e = Number.MAX_VALUE;
+                    document.getElementById("demo10").innerHTML = e;
+                </script>
+                <hr>
+                 <h3>MIN_VALUE</h3>
+                <p>MIN_VALUE JavaScript'te mümkün olan en düşük sayıyı döndürür.</p>
+                <p id="demo11"></p>
+                <script>
+                    let t = Number.MIN_VALUE;
+                    document.getElementById("demo11").innerHTML = t;
+                </script>
+                <hr>
+                <h3>POSITIVE_INFINITY</h3>
+                <p>Sonsuzluğu temsil eder (taşma durumunda döndürülür)</p>
+                <p id="demo12"></p>
+                <script>
+                 let s = Number.POSITIVE_INFINITY;
+                 document.getElementById("demo12").innerHTML = s;
+                </script>
+                <hr>
+                <h3>NEGATIVE_INFINITY</h3>
+                <p>Negatif sonsuzluğu temsil eder (taşmada döndürülür)</p>
+                <p id="demo13"></p>
+                <script>
+                let k = Number.NEGATIVE_INFINITY;
+                document.getElementById("demo13").innerHTML = k;
+                </script>
+                <hr>
+                <h3>NaN</h3>
+                <p>"Sayı Değil" değerini temsil eder</p>
+                <p>Sayısal olmayan bir dizeye bölünen bir sayı NaN (Sayı Değil) olur:</p>
+                <p id="demo14"></p>
+                <script>
+                document.getElementById("demo14").innerHTML = 100 / "Apple";
+                </script>
+                <hr>
+                <p>Bir değişkende, ifadede veya değerde Number özelliğinin kullanılması tanımsız döndürür:</p>
+                <p id="demo15"></p>
+                <script>
+                    let r = 6;
+                    document.getElementById("demo15").innerHTML = r.MAX_VALUE;      
+               </script>
+
+                
+
+
+
+
+    </body>
+</html>

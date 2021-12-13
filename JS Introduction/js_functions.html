@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Functions</h2>
+        <p>Bu örnek, bir hesaplama yapan ve sonucu döndüren bir işlevi çağırır:</p>
+        <p id="demo"></p>
+
+        <script>
+            function myFunction(p1, p2) {
+            return p1 * p2; // İşlev, p1 ve p2'nin çarpımını döndürür
+            }
+            document.getElementById("demo").innerHTML = myFunction(6,8);
+        </script>
+        <p>----------------------------------------------------------------------------</p>
+        <p>Bu örnek, bir hesaplama gerçekleştiren ve sonucu döndüren bir işlevi çağırır:</p>
+        <p id="dem"></p>
+        <script>
+            var x = myFun(4,3); // Fonksiyon çağrılır, dönüş değeri x ile biter
+            document.getElementById("dem").innerHTML = x;
+
+            function myFun(a,b) {
+                return a * b; // Fonksiyon a ve b'nin çarpımını döndürür
+            }
+        </script>
+        <p>----------------------------------------------------------------------------</p>
+        <p>Bu örnek, Fahrenhayt'tan Santigrat'a dönüştürmek için bir işlevi çağırır:</p>
+        <p id="cel"></p>
+        <script>
+            function toCelsius(f) {
+                return (5/9) * (f-32);
+            }
+            document.getElementById("cel").innerHTML = toCelsius(77);
+        </script>
+        <p>----------------------------------------------------------------------------</p>
+        <p>() olmadan bir işleve erişmek, işlev sonucu yerine işlev tanımını döndürür:</p>
+        <p id="fah"></p>
+        <script>
+            function toCelsius(f) {
+                return (5/9) * (f-32);
+            }
+            document.getElementById("fah").innerHTML = toCelsius;        
+           </script>
+          <p>----------------------------------------------------------------------------</p>
+          <p>Bir fonksiyonun dönüş değerini saklamak için bir değişken kullanmak yerine:</p>
+          <p id="fun"></p>
+          <script>
+              document.getElementById("fun").innerHTML = "Sıcaklık  " + toCels(77) + "  Santigrat";
+               function toCels(fahrenheit) {
+                   return (5/9) * (fahrenheit-32);
+               }
+        </script>
+       <p>----------------------------------------------------------------------------</p>
+        <p>myFunc() dışında carName tanımsız.</p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <script>
+        myFunc();
+        // buradaki kod carName kullanamaz
+        function myFunc() {
+            let carName = "Volvo";
+            // burayı kodlayın carName kullanabilir
+            document.getElementById("demo1").innerHTML = typeof carName + " " + carName;
+        }
+        document.getElementById("demo2").innerHTML = typeof carName;
+       // buradaki kod carName kullanamaz
+       </script>
+          <p>----------------------------------------------------------------------------</p>
+         
+
+    </body>
+</html>

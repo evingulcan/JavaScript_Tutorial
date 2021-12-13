@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Booleans</h2>
+    <p>Boolean()Bir ifadenin (veya bir değişkenin) doğru olup olmadığını öğrenmek için işlevi kullanabilirsiniz :</p>
+    <p>Boolean(10 > 9) değerini görüntüleyin:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = Boolean(10 > 9);
+    </script>
+    <hr>
+    <h3>"Değeri" Olan Her Şey Gerçektir</h3>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = 
+        "100 " + Boolean(100) + "<br>" +
+        "3.14 " + Boolean(3.14) + "<br>" +
+        "-15 " + Boolean(-15) + "<br>" +
+        "Herhangi bir (boş değil) dize " + Boolean ("Merhaba") + "<br>" +
+        "'false' dizesi bile " + Boolean('false') + "<br>" +
+        "Herhangi bir ifade (sıfır hariç) " + Boolean(1+7+3.14);
+    </script>
+    <hr>
+    <h3>"Değer" Olmayan Her Şey Yanlıştır</h3>
+    <p id="demo2"></p>
+    <script>
+        let x = 0;
+        let y = -0;
+        let z = "";
+        let t;
+        let n = null;
+        let m = false;
+        let k = 10 / "Merhaba";
+        document.getElementById("demo2").innerHTML = Boolean(x) + "<br>" +
+                                                     Boolean(y) + "<br>" +
+                                                     Boolean("") + "<br>" +
+                                                     Boolean(t) + "<br>" +
+                                                     Boolean(n) + "<br>" +
+                                                     Boolean(m) + "<br>" +
+                                                     Boolean(k);    
+    </script>
+    <hr>
+    <p>Boolean ve Boolean nesneleri güvenli bir şekilde karşılaştırılamaz:</p>
+    <p id="demo3"></p>
+    <script>
+        // a bir boolean
+        let a = false;
+
+        // b bir object
+        let b = new Boolean(false);
+
+        document.getElementById("demo3").innerHTML  = typeof a + "<br>" + typeof b;
+
+    </script>
+    <hr>
+    <p>Boolean ve Boolean nesneleri güvenli bir şekilde karşılaştırılamaz:</p>
+    <p id="demo4"></p>
+    <script>
+        let c = false;
+        let d = new Boolean(false);
+        document.getElementById("demo4").innerHTML  = (c == d);
+    </script>
+    <hr>
+    <p>Boolean ve Boolean nesneleri güvenli bir şekilde karşılaştırılamaz:</p>
+    <p id="demo5"></p>
+    <script>
+        let s = false;
+        let l = new Boolean(false);
+        document.getElementById("demo5").innerHTML = (s === l);
+
+    </script>
+    <hr>
+    <p id="demo6"></p>
+    <script>
+        const e = new Boolean(false);
+        const o = new Boolean(false);
+        document.getElementById("demo6").innerHTML = (e == o);
+    </script>
+     <hr>
+     <p id="demo7"></p>
+     <script>
+         const v = new Boolean(false);
+         const w = new Boolean(false);
+         document.getElementById("demo7").innerHTML = (v === w);
+     </script>
+
+</body>
+
+</html>

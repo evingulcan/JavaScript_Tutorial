@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+        <h2>JavaScript ISO Dates</h2>
+        <p>ISO 8601, tarih ve saatlerin temsili için uluslararası standarttır.</p>
+        <p id="demo"></p>
+        <script>
+        const d = new Date("2015-03-25");
+        document.getElementById("demo").innerHTML = d;
+        </script>
+        <hr>
+        <h3>ISO Tarihleri ​​(Yıl ve Ay)</h3>
+        <p>ISO tarihleri ​​gün belirtilmeden yazılabilir (YYYY-AA):</p>
+        <p id="demo1"></p>
+        <script>
+            const demo10 = new Date("2015-03");
+            document.getElementById("demo1").innerHTML = d1;
+        </script>
+        <hr>
+        <h3>ISO Tarihleri ​​(Yalnızca Yıl)</h3>
+        <p>ISO tarihleri ​​ay ve gün olmadan yazılabilir (YYYY):</p>
+        <p id="demo2"></p>
+        <script>
+            const d2 = new Date("2015");
+            document.getElementById("demo2").innerHTML = d2;
+        </script>
+        <hr>
+        <h3>ISO Tarihleri ​​(Tarih-Saat)</h3>
+        <p>ISO tarihleri ​​saat, dakika ve saniye eklenerek yazılabilir (YYYY-AA-GGGTH:MM:SSZ):</p>
+        <p>Tarih ve saati büyük T ile ayırın.</p>
+        <p>UTC saatini büyük Z ile belirtin.</p>
+        <p id="demo3"></p>
+        <script>
+            const d3 = new Date("2021-03-25T12:00:00Z");
+            document.getElementById("demo3").innerHTML = d3;
+        </script>
+        <hr>
+        <h3>JavaScript Kısa Tarihler.</h3>
+        <p>Kısa tarihler şöyle bir "AA/GG/YYYY" sözdizimi ile yazılır:</p>
+        <p id="demo4"></p>
+        <script>
+            const d4 = new Date("03/25/2015");
+            document.getElementById("demo4").innerHTML = d4;
+        </script>
+        <p>Bazı tarayıcılarda, başında sıfır olmayan aylar veya günler bir hata üretebilir:</p>
+        <p>"YYYY/AA/GG" davranışı tanımsız.</p>
+        <p>"GG-AA-YYYY" davranışı da tanımsızdır.</p>
+        <hr>
+        <h3>JavaScript Uzun Tarihler.</h3>
+        <p>Uzun tarihler genellikle şöyle bir "MMM GG YYYY" sözdizimi ile yazılır:</p>
+        <p id="demo5"></p>
+        <script>
+        const d5 = new Date("Mar 25 2015");
+        document.getElementById("demo5").innerHTML = d5;
+        </script>
+        <p>Ay ve gün herhangi bir sırada olabilir:</p>
+        <p>Ay tam olarak (Ocak) veya kısaltılarak (Ocak) yazılabilir:</p>
+        <p>Virgüller göz ardı edilir. İsimler büyük/küçük harfe duyarsızdır:</p>
+        <hr>
+        <h3>Tarih Girişi - Tarihleri ​​Ayrıştırma</h3>
+        <p>Geçerli bir tarih dizginiz varsa, Date.parse()onu milisaniyeye dönüştürmek için yöntemi kullanabilirsiniz .</p>
+        <p>Date.parse() tarih ile 1 Ocak 1970 arasındaki milisaniye sayısını döndürür:</p>
+        <p id="demo6"></p><script>
+        const msec = Date.parse("March 21, 2012");
+        document.getElementById("demo6").innerHTML = msec;
+        </script>
+        <hr>
+        <p>Date.parse(string) milisaniye döndürür.</p>
+        <p>Dizeyi bir tarih nesnesine dönüştürmek için dönüş değerini kullanabilirsiniz:</p>
+        <p id="demo7"></p>
+        <script>
+            let msec1 = Date.parse("March 21, 2012");
+            const d6 = new Date(msec1);
+            document.getElementById("demo7").innerHTML = d6;
+       </script>
+</body>
+</html>

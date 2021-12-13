@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Sets</h2>
+    <h3>new Set() Yöntemi</h3>
+
+    <p id="demo"></p>
+
+    <script>
+        // Bir küme oluştur
+        const letters = new Set(["a", "b", "c"]);
+
+        // set.size göster
+        document.getElementById("demo").innerHTML = letters.size;
+    </script>
+    <hr>
+    <h3>add() Yöntemi</h3>
+    <p id="demo1"></p>
+    <script>
+        // Bir küme oluştur
+        const letters1 = new Set(["a", "b", "c"]);
+        
+        // Yeni bir eleman ekle
+        letters1.add("d");
+        letters1.add("e");
+        letters1.add("e");
+
+        // set.size göster
+        document.getElementById("demo1").innerHTML = letters1.size;
+
+    </script>
+    <p>Eşit öğeler eklerseniz, yalnızca ilki kaydedilir:</p>
+    <hr>
+    <h3>forEach() Yöntemi</h3>
+    <p>forEach()Yöntem çağırır (çağrı), her bir set elemanı için bir fonksiyonu:</p>
+    <p id="demo2"></p>
+    <script>
+        const letters2 = new Set(["a", "b", "c"]);
+
+        // Elemanları listele
+        let text = "";
+        letters2.forEach (function(value) {
+            text += value + "<br>";
+        })
+        document.getElementById("demo2").innerHTML = text;
+    </script>
+    <hr>
+    <h3>values() Yöntemi</h3>
+    <p>values()Yöntem, bir set tüm değerleri içeren yeni bir yineleyici nesnesi döndürür:</p>
+    <p id="demo3"></p>
+    <script>
+        const letters3 = new Set(["a", "b", "c"]);
+
+        document.getElementById("demo3").innerHTML = letters3.values();
+    </script>
+    <hr>
+    <p>Yinelenen Set değerleri:</p>
+   <p id="demo4"></p>
+   <script>
+    const letters4 = new Set(["a", "b", "c"]);
+    let text1 = "";
+    for (const x of letters4.values()) {
+        text1 += x + "<br>";
+    }
+    document.getElementById("demo4").innerHTML = text1;
+   </script>
+
+
+</body>
+
+</html>
+<!--
+    new Set() = Yeni bir Küme oluşturur
+    add() = Kümeye yeni bir öğe ekler
+    delete() = Kümeden bir öğeyi kaldırır
+    has() = Kümede bir değer varsa true döndürür
+    forEach() = Kümedeki her öğe için bir geri arama başlatır
+    values() = 	Bir Küme içindeki tüm değerlere sahip bir yineleyici döndürür
+    size = 	Bir Kümedeki öğelerin sayısını döndürür
+-->

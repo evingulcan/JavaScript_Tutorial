@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For Of Loop</h2>
+    <p>for of deyimi, yinelenebilir herhangi bir nesnenin değerleri arasında döngü yapar:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const cars = ["BMW", "Volvo", "Mini"];
+
+        let text = "";
+        for (let x of cars) {
+            text += x + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <hr>
+    <p></p>
+    <p id="demo1"></p>
+    <script>
+        let language = "JavaScript";
+        let txt = "";
+        for (let y of language) {
+            txt += y + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = txt;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript if</h2>
+    <p><strong>if</strong>, Bir koşul doğruysa yürütülecek JavaScript kodu bloğunu belirtmek için ifadeyi kullanın .</p>
+
+    <p>"İyi günler!" saat 18:00'den az ise:</p>
+
+    <p id="demo">İyi akşamlar!</p>
+
+    <script>
+        if (new Date().getHours() < 18) {
+            document.getElementById("demo").innerHTML = "İyi günler...";
+        }
+    </script>
+    <hr>
+    <p><strong>else</strong>, Koşul yanlışsa yürütülecek bir kod bloğu belirtmek için ifadeyi kullanın .</p>
+    <p>Zamana dayalı bir selamlama:</p>
+    <p id="demo1"></p>
+    <script>
+        const hour = new Date().getHours();
+        let greeting;
+
+        if (hour < 18) {
+            greeting = "İyi günler...";
+
+        }
+        else {
+            greeting = "İyi geceler...";
+        }
+        document.getElementById("demo1").innerHTML = greeting;
+    </script>
+    <hr>
+    <p><strong>else if</strong> İlk koşul yanlışsa, yeni bir koşul belirtmek için ifadeyi kullanın</p>
+    <p>Zamana dayalı bir selamlama:</p>
+    <p id="demo2"></p>
+    <script>
+        const time = new Date().getHours();
+        let greetings;
+         if (time < 10) {
+             greetings = "Günaydın...";
+         }
+         else if (time < 20) {
+             greetings = "İyi günler...";
+         }
+         else {
+             greetings = "İyi geceler...";
+         }
+         document.getElementById("demo2").innerHTML = greetings;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>getTime() Yöntemi</h2>
+        <p>getTime() Yöntem 1 Ocak 1970'ten bu yana milisaniye sayısını döndürür:</p>
+        <p>getTime() işlevi, o zamandan bu yana geçen milisaniye sayısını döndürür:</p>
+        <p id="demo"></p>
+        <script>
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.getTime();
+        </script>
+        <hr>
+        <h3>getFullYear() Yöntemi</h3>
+        <p>getFullYear() Yöntem dört basamaklı bir sayı olarak bir tarihinin yılını döndürür:</p>
+        <p id="demo1"></p>
+        <script>
+        const d1 = new Date();
+        document.getElementById("demo1").innerHTML = d1.getFullYear();
+        </script>
+        <hr>
+        <h3>getMonth() Yöntemi</h3>
+        <p>getMonth() Yöntem, bir dizi (0-11) gibi bir tarihinin ayını döndürür:</p>
+        <p>Doğru ayı bulmak için 1 eklemelisiniz:</p>
+        <p id="demo2"></p>
+        <script>
+        const d2 = new Date();
+        document.getElementById("demo2").innerHTML = d2.getMonth() + 1;
+        </script>
+        <hr>
+        <p>getMonth() yöntemi, ayı bir sayı olarak döndürür.</p>
+        <p>Ayın adını görüntülemek için bir dizi kullanabilirsiniz:</p>
+        <p id="demo3"></p>
+        <script>
+            const months = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+            let d3 = new Date();
+            let month = months[d3.getMonth()];
+            document.getElementById("demo3").innerHTML = month; 
+        </script>
+        <hr>
+        <h3>getDate() Yöntemi</h3>
+        <p>getDate() Yöntem, bir dizi (1-31) gibi bir tarih gününü döndürür:</p>
+        <p id="demo4"></p>
+        <script>
+            const d4 = new Date();
+            document.getElementById("demo4").innerHTML = d4.getDate();
+        </script>
+        <hr>
+        <h3>getHours() Yöntemi</h3>
+        <p>getHours() Yöntem, bir dizi (0-23) gibi bir tarih saat verir:</p>
+        <p id="demo5"></p>
+        <script>
+            const d5 = new Date();
+            document.getElementById("demo5").innerHTML = d5.getHours();
+        </script>
+        <hr>
+        <h3>getMinutes() Yöntemi</h3>
+        <p>getMinutes() Yöntem, bir dizi (0-59) gibi bir tarih dakika verir:</p>
+        <p id="demo6"></p>
+        <script>
+            const d6 = new Date();
+            document.getElementById("demo6").innerHTML = d6.getMinutes();
+        </script>
+        <hr>
+        <h3>getSeconds() Yöntemi</h3>
+        <p>getSeconds() Yöntem, bir dizi (0-59) gibi bir tarih saniye verir:</p>
+        <p id="demo7"></p>
+        <script>
+            const d7 = new Date();
+            document.getElementById("demo7").innerHTML = d7.getSeconds();
+        </script>
+        <hr>
+        <h3>getMilliseconds() Yöntemi</h3>
+        <p>getMilliseconds()Yöntem, bir dizi (0-999) gibi bir tarih milisaniye döndürür:</p>
+        <p id="demo8"></p>
+        <script>
+            const d8 = new Date();
+            document.getElementById("demo8").innerHTML = d8.getMilliseconds();
+        </script>
+        <hr>
+        <h3>getDay() Yöntemi</h3>
+        <p>getDay()Yöntem, bir dizi (0-6) gibi bir tarih hafta içi verir:</p>
+        <p id="demo9"></p>
+        <script>
+            const d9 = new Date();
+            document.getElementById("demo9").innerHTML = d9.getDay();
+        </script>
+        <hr>
+        <p>Bir dizi ad kullanabilir getDay()ve haftanın gününü bir ad olarak döndürebilirsiniz:</p>
+        <p>getDay() yöntemi, haftanın gününü bir sayı olarak döndürür.</p>
+        <p>Haftanın gününün adını görüntülemek için bir dizi kullanabilirsiniz:</p>
+        <p id="demo10"></p>
+        <script>
+            const days = ["Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"];
+
+            const d10 = new Date();
+            let day = days[d10.getDay()];
+            document.getElementById("demo10").innerHTML = day;
+        </script>
+   
+   
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For In Loop</h2>
+    <p>for in ifadesi, bir nesnenin özellikleri arasında döngü yapar:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const person = { fname: "John", lname: "Doe", age: 25 };
+
+        let txt = "";
+        for (let x in person) {
+            txt += person[x] + " ";
+        }
+
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+    <hr>
+    <p>for in ifadesi, dizi değerleri üzerinde döngü yapabilir:</p>
+    <p id="demo1"></p>
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        let txt1 = "";
+        for (let y in numbers) {
+            txt1 += numbers[y] + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = txt1;
+    </script>
+    <hr>
+    <p>forEach()Usul, her bir dizi eleman için bir kere bir işlev (bir geri arama işlevi) çağırır.</p>
+    <p>Her dizi öğesi için bir işlevi çağırır.</p>
+    <p id="demo2"></p>
+    <script>
+        const numbers1 = [45, 4, 9, 16, 25];
+        let txt2 = "";
+
+        numbers1.forEach(myFunction);
+        document.getElementById("demo2").innerHTML = txt2; document.getElementById("demo2").innerHTML = txt2;
+
+        function myFunction(value, index, array) {
+            txt2 += value + "<br>";
+        }
+    </script>
+
+</body>
+
+</html>

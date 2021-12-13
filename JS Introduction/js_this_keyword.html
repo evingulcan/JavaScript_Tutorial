@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>The JavaScript <i>this</i> Keyword</h2>
+    <p>Bu örnekte, <b>this</b> <b>person</b> nesnesini temsil eder .</p>
+    <p>Çünkü kişi nesnesi fullName yöntemine "sahiptir(owns)".</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // Bir nesne oluştur:
+        const person = {
+            firstName: "Evin",
+            lastName: "Gülcan",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // Nesneden gelen verileri göster:
+        document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+    <hr>
+    <p>Bir işlevde, varsayılan olarak <b>this</b>> , Global nesneye atıfta bulunur.</p>
+    <p>Katı modda, <b>this</b> ise <b>undefined</b> katı mod varsayılan bağlayıcı izin vermediği için,:</p>
+    <p id="demo1"></p>
+
+    <script>
+        "use strict";
+        document.getElementById("demo1").innerHTML = myFunction();
+        function myFunction() {
+            return this;
+        }
+    </script>
+    <hr>
+    <h3>Açık İşlev Bağlama</h3>
+    <p><b>call()</b> Ve <b>apply()</b> yöntemler JavaScript yöntemlerini önceden tanımlanmıştır.</p>
+    <p>Her ikisi de argüman olarak başka bir nesneyle bir nesne yöntemini çağırmak için kullanılabilir.</p>
+   <p>Bu örnekte <b>this</b> , person1'in bir yöntemi olsa bile person2'yi ifade eder:</p>
+    <p id="demo2"></p>
+
+    <script>
+        const person1 = {
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        const person2 = {
+            firstName: "Evin",
+            lastName: "Gülcan",
+        }
+        let x = person1.fullName.call(person2);
+        document.getElementById("demo2").innerHTML = x; 
+    </script>
+
+
+</body>
+
+</html>

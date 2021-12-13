@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>My First Web Page</h2>
+
+    <p>Tarayıcınızda (Chrome, IE, Firefox) F12 ile hata ayıklamayı etkinleştirin ve hata ayıklayıcı menüsünden "Consol"u
+        seçin.</p>
+    <p>Tarayıcınız hata ayıklamayı destekliyorsa console.log(), hata ayıklayıcı penceresinde JavaScript değerlerini
+        görüntülemek için kullanabilirsiniz :</p>
+    <script>
+        a = 5;
+        b = 6;
+        c = a + b;
+        console.log(c);
+    </script>
+    <hr>
+    <h2>JavaScript Debugger</h2>
+     <p><b>debugger</b> Anahtar JavaScript yürütülmesini ve arama (varsa) ayıklama fonksiyonu durdurur.</p>
+    <p id="demo1"></p>
+
+    <p>Hata ayıklayıcı açıkken, aşağıdaki kod üçüncü satırı çalıştırmadan önce çalışmayı durdurmalıdır.</p>
+  
+    <script>
+        let x = 15 * 5;
+        debugger;
+        document.getElementById("demo1").innerHTML = x;
+    </script>
+
+</body>
+
+</html>

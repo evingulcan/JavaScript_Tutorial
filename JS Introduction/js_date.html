@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>JavaScript new Date()</h3>
+        <p>new Date() işlevini kullanarak, geçerli tarih ve saatle yeni bir tarih nesnesi oluşturur:</p>
+        <p id="demo"></p>
+        <script>
+          const d = new Date();
+          document.getElementById("demo").innerHTML = d;
+        </script>
+        <hr>
+        <p>Yeni Tarih(7 sayı) kullanarak, belirtilen tarih ve saate sahip yeni bir tarih nesnesi oluşturur:</p>
+        <p id="demo1"></p>
+        <script>
+            const d1 = new Date(2018, 11, 24, 10, 33, 30, 0);
+            document.getElementById("demo1").innerHTML = d1;
+        </script>
+        <hr>
+        <p>JavaScript, ayları 0'dan 11'e kadar sayar.</p>
+        <p>Maksimumdan daha yüksek bir gün belirtmek hataya neden olmaz, ancak sonraki aya taşma eklenir:</p>
+        <p id="demo2"></p>
+        <script>
+            const d2 = new Date(2018, 05, 35, 10, 33, 30, 0);
+            document.getElementById("demo2").innerHTML = d2;
+        </script>
+        <hr>
+        <h3>6, 4, 3 veya 2 Rakam Kullanma</h3>
+        <p>6 sayı yılı, ayı, günü, saati, dakikayı, saniyeyi belirtir:</p>
+        <p id="demo3"></p>
+        <script>
+            const d3 = new Date(2018, 11, 24, 10, 33, 30);
+            document.getElementById("demo3").innerHTML = d3;
+        </script>
+        <hr>
+        <p>5 sayı yılı, ayı, günü, saati ve dakikayı belirtir:</p>
+        <p id="demo4"></p>
+        <script>
+            const d4 = new Date(2018, 11, 24, 10, 33);
+            document.getElementById("demo4").innerHTML = d4;
+        </script>
+        <hr>
+        <p>4 sayı yılı, ayı, günü ve saati belirtir:</p>
+        <p id="demo5"></p>
+        <script>
+            const d5 = new Date(2018, 11, 24, 10);
+            document.getElementById("demo5").innerHTML = d5;
+        </script>
+         <hr>
+         <p>3 sayı yılı, ayı ve günü belirtir:</p>
+         <p id="demo6"></p>
+         <script>
+             const d6 = new Date(2018, 11, 24);
+             document.getElementById("demo6").innerHTML = d6;
+         </script>
+           <hr>
+           <p>2 sayı yılı ve ayı belirtir:</p>
+           <p id="demo7"></p>
+           <script>
+               const d7 = new Date(2018, 11);
+               document.getElementById("demo7").innerHTML = d7;
+           </script>
+          <hr>
+          <p>Ayı atlayamazsınız. Yalnızca bir parametre sağlarsanız, milisaniye olarak kabul edilecektir.</p>
+          <p id="demo8"></p>
+          <script>
+              const d8 = new Date(2018);
+              document.getElementById("demo8").innerHTML = d8;
+          </script>
+          <hr>
+          <h3>Önceki Yüzyıl</h3>
+          <p>Bir ve iki basamaklı yıllar 19xx olarak yorumlanacaktır:</p>
+          <p id="demo9"></p>
+          <script>
+              const d9 = new Date(99, 11, 24);
+            document.getElementById("demo9").innerHTML = d9;
+          </script>
+          <hr>
+          <p></p>
+          <p id="demo10"></p>
+          <script>
+              const d10 = new Date(9, 11, 24);
+              document.getElementById("demo10").innerHTML = d10;
+          </script>
+          <hr>
+          <h3>dateString(yeniTarih)</h3>
+          <p>new Date(dateString)bir tarih dizesinden yeni bir tarih nesnesi oluşturur :</p>
+          <p>Belirtilen tarih ve saatle bir Date nesnesi oluşturulabilir:</p>
+          <p id="demo11"></p>
+          <script>
+              const d11 = new Date("October 13, 2014 11:13:00");
+              document.getElementById("demo11").innerHTML = d11;
+          </script>
+          <hr>
+          <h3>yeni Tarih ( milisaniye )</h3>
+          <p>new Date(milliseconds)sıfır saat artı milisaniye olarak yeni bir tarih nesnesi oluşturur :</p>
+          <p>Yeni Tarih(milisaniye) kullanıldığında, 1 Ocak 1970 00:00:00 Evrensel Saat (UTC) artı milisaniye olarak yeni bir tarih nesnesi oluşturur:</p>
+          <p id="demo12"></p>
+          <script>
+              const d12 = new Date(0);
+              document.getElementById("demo12").innerHTML = d12;
+          </script>    
+          <hr>
+          <p>1 Ocak 1970'ten 100000000000 milisaniye, yaklaşık 3 Mart 1973'tür:</p> 
+          <p id="demo13"></p>
+          <script>
+              const d13 = new Date(100000000000);
+              document.getElementById("demo13").innerHTML = d13;
+          </script>   
+           <hr>
+           <p>1 Ocak 1970'ten 100000000000 milisaniye, yaklaşık 31 Ekim 1966:</p> 
+           <p id="demo14"></p>
+           <script>
+               const d14 = new Date(-100000000000);
+               document.getElementById("demo14").innerHTML = d14;
+           </script>   
+            <hr>
+            <p>Yeni Tarih(milisaniye) kullanıldığında, 1 Ocak 1970 00:00:00 Evrensel Saat (UTC) artı milisaniye olarak yeni bir tarih nesnesi oluşturur:</p> 
+            <p id="demo15"></p>
+            <script>
+                const d15 = new Date(86400000);
+                document.getElementById("demo15").innerHTML = d15;
+            </script>  
+            <p>Bir gün (24 saat) 86.400.000 milisaniyedir.</p>   
+            <hr>
+            <h3>Tarihleri ​​Görüntüleme</h3>
+            <p id="demo16"></p>
+            <script>
+                const d16 = new Date();
+                document.getElementById("demo16").innerHTML = d16;
+            </script>
+             <hr>
+             <p>toString() yöntemi, bir tarihi bir dizgeye dönüştürür:</p>
+             <p id="demo17"></p>
+             <script>
+                 const d17 = new Date();
+                 document.getElementById("demo17").innerHTML = d17.toString();
+             </script>
+              <hr>
+              <p>toUTCString() yöntemi, bir tarihi UTC dizesine (tarih görüntüleme standardı) dönüştürür:</p>
+              <p id="demo18"></p>
+              <script>
+                  const d18 = new Date();
+                  document.getElementById("demo18").innerHTML = d18.toUTCString();
+              </script>
+               <hr>
+               <p>toDateString() yöntemi, bir tarihi tarih dizesine dönüştürür:</p>
+               <p id="demo19"></p>
+               <script>
+                   const d19 = new Date();
+                   document.getElementById("demo19").innerHTML = d19.toDateString();
+               </script>
+               <hr>
+               <p>toISOString() yöntemi, ISO standart biçimini kullanarak bir tarihi tarih dizesine dönüştürür:</p>
+               <p id="demo20"></p>
+               <script>
+                   const d20 = new Date();
+                   document.getElementById("demo20").innerHTML = d20.toISOString();
+               </script>    
+               
+
+
+   
+   
+    </body>
+</html>

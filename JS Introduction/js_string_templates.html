@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Template Literals</h2>
+
+    <p><b>Template literals</b>, bir dize tanımlamak için geriye doğru işaretleri (``) kullanır:</p>
+
+    <p id="demo"></p>
+
+    <p>Şablon değişmezleri Internet Explorer'da desteklenmez.</p>
+
+    <script>
+        let text = `Selam Dünya!`;
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <hr>
+    <p>Geri tiklerle, bir dize içinde hem tek hem de çift tırnak kullanabilirsiniz:</p>
+    <p id="demo1"></p>
+    <script>
+        let text1 = `He's often called "Johnny"`;
+        document.getElementById("demo1").innerHTML = text1;
+    </script>
+    <hr>
+    <p>Şablon değişmezleri çok satırlı dizelere izin verir:</p>
+    <p id="demo2"></p>
+    <script>
+        let text2 = `Hızlı kahverengi 
+        tilki tembel 
+        köpeğin üzerinden 
+        atlar`;
+        document.getElementById("demo2").innerHTML = text2;
+    </script>
+       <hr>
+       <p>Şablon değişmezleri, dizelerdeki değişkenlere izin verir:</p>
+       <p id="demo3"></p>
+       <script>
+           let firstName = `Evin`;
+           let lastName = `Gülcan`;
+           let text3 = `Hoşgeldiniz ${firstName} ${lastName}!`;
+           document.getElementById("demo3").innerHTML = text3;
+       </script>
+       <hr>
+       <p>Şablon değişmezleri, dizelerdeki değişkenlere izin verir:</p>
+        <p id="demo4"></p>
+        <script>
+            let fiyat = 10;
+            let vergi = 0.25;
+            let toplam = `Toplam: ${(fiyat * (1 + vergi)).toFixed(2)}`;
+            document.getElementById("demo4").innerHTML = toplam;
+        </script>
+        <hr>
+        <p id="demo5"></p>
+        <script>
+            let header = "Templates Literals";
+            let tags = ["template literals", "javaScript", "es6"];
+            let html = `<h2>${header}</h2><ul>`;
+                for (const x of tags) {
+                    html += `<li>${x}</li>`;
+                }
+                html += `</ul>`;
+                document.getElementById("demo5").innerHTML = html;
+        </script>
+</body>
+
+</html>
+<!--
+    Template literals(Şablon Değişmezleri) =  bir dize tanımlamak için tırnak işaretleri ("") yerine geriye doğru işaretleri (``) kullanır.
+
+-->

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>JavaScript Loops</h2>
+  <p>Bu breakifade aynı zamanda bir döngüden çıkmak için de kullanılabilir:</p>
+  <p><b>Break </b>ifadesi olan bir döngü .</p>
+
+  <p id="demo"></p>
+
+  <script>
+    let text = "";
+    for (let i = 0; i < 10; i++) {
+      if (i === 3) { break; }
+      text += "Sayı " + i + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = text;
+  </script>
+  <p>Yukarıdaki örnekte break, döngü sayacı (i) 3 olduğunda ifade döngüyü bitirir ("döngüyü keser").</p>
+
+  <hr>
+  <p><b>continue </b> Belirtilen durum oluşur ve eğer (döngüde) ifadesi sonları bir yineleme döngüsünde sonraki yineleme
+    devam eder.</p>
+  <p id="demo1"></p>
+
+  <script>
+    let text1 = "";
+    for (let a = 0; a < 10; a++) {
+      if (a === 3) { continue; }
+      text1 += "Sayı " + a + "<br>";
+    }
+    document.getElementById("demo1").innerHTML = text1;
+  </script>
+  <hr>
+  <p><b>continue</b> İfadesi (veya bir etiket referans olmadan) sadece kullanılabilir bir döngü yinelemeyi atlar .</p>
+  <p><b>break</b> Açıklamada, bir etiket referans olmadan, sadece kullanılan olabilir bir döngü veya bir anahtarın dışarı
+    atlamak .</p>
+
+  <p id="demo2"></p>
+
+  <script>
+    const cars = ["BMW", "Volvo", "Saab", "Ford"];
+    let text2 = "";
+
+    list: {
+      text2 += cars[0] + "<br>";
+      text2 += cars[1] + "<br>";
+      break list;
+      text2 += cars[2] + "<br>";
+      text2 += cars[3] + "<br>";
+    }
+
+    document.getElementById("demo2").innerHTML = text2;
+  </script>
+</body>
+
+</html>

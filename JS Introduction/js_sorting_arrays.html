@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2 style="text-align: center;">JavaScript Dizi Sıralaması</h2>
+         <h3>sort() yöntemi</h3>
+        <p>sort() yöntemi, bir diziyi alfabetik olarak sıralar:</p>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo").innerHTML = fruits;
+
+            fruits.sort();
+            document.getElementById("demo1").innerHTML = fruits;
+        </script>
+        <hr>
+        <h3>Bir Diziyi Ters Çevirme</h3>
+        <p>reverse()Yöntem, bir dizideki öğeleri tersine çevirir.</p>
+        <p>sort() ve reverse() öğelerini birleştirerek bir diziyi azalan düzende sıralayabilirsiniz:</p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <script>
+            //Bir dizi oluşturun ve görüntüleyin:
+            const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo2").innerHTML = fruits1;
+
+            //Önce diziyi sırala
+            fruits1.sort();
+
+            //Sonra tersine çevir:
+            fruits1.reverse();
+
+            document.getElementById("demo3").innerHTML = fruits1;
+        </script>
+        <hr>
+        <h3>Sayısal Sıralama</h3>
+        <p>Diziyi artan düzende sıralayın:</p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+
+        <script>
+            const points = [40,100,1,5,25,10];
+            document.getElementById("demo4").innerHTML = points;
+
+            points.sort(function(a, b) {
+                return a - b
+            });
+            document.getElementById("demo5").innerHTML = points;
+        </script>
+        <hr>
+        <p>Diziyi azalan düzende sıralayın:</p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+
+        <script>
+            const points1 = [40,100,1,5,25,10];
+            document.getElementById("demo6").innerHTML = points1;
+
+            points1.sort(function(a, b) {
+                return b - a
+            });
+            document.getElementById("demo7").innerHTML = points1;
+        </script>
+        <hr>
+        <h3>Karşılaştırma İşlevi</h3>
+        <p>Diziyi alfabetik veya sayısal olarak sıralamak için düğmeleri tıklayın.</p>
+        
+        <button onclick="myFunction1()">Alfabetik Sırala</button>
+        <button onclick="myFunction2()">Sayısal Olarak Sırala</button>
+
+        <p id="demo8"></p>
+
+        <script>
+            const points2 = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo8").innerHTML = points2;
+
+            function myFunction1() {
+                points2.sort();
+
+                document.getElementById("demo8").innerHTML = points2;
+            }
+           function myFunction2() {
+               points2.sort(function(a,b) {
+                   return a - b
+               });
+               document.getElementById("demo8").innerHTML = points2;
+           }
+        </script>
+        <hr>
+        <h3>Bir Diziyi Rastgele Sırada Sıralama</h3>
+        <p>Diziyi rastgele sırada sıralamak için düğmeye (tekrar tekrar) tıklayın.</p>
+        <button onclick="myFunction3()">Dene</button>
+        <p id="demo9"></p>
+        <script>
+            const points3 =  [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo9").innerHTML = points3;
+
+            function myFunction3() {
+                points3.sort(function(a,b) {
+                return 0.5 - Math.random()
+                });
+                document.getElementById("demo9").innerHTML = points3;
+            }
+        </script>
+        <hr>
+        <h3>Fisher Yates Yöntemi</h3>
+        <p>Diziyi rastgele sırada sıralamak için düğmeye (tekrar tekrar) tıklayın.</p>
+        <button onclick="myFunction4()">Dene</button>
+        <p id="demo10"></p>
+
+        <script>
+            const points4 = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo10").innerHTML = points4;
+
+            function myFunction4() {
+                for (let i = points4.length - 1; i>0; i--) {
+                    let j = Math.floor(Math.random() * i)
+                    let k = points4[i]
+                    points4[i] = points4[j]
+                    points4[j] = k
+                }
+                document.getElementById("demo10").innerHTML = points4;
+            }
+        </script>
+        <hr>
+        <p>En küçük sayı: <span id="demo11"></span></p>
+        <script>
+            const points5 = [40, 100, 1, 5, 25, 10];
+            points5.sort(function(a,b) {
+                return a - b
+            });
+            // şimdi noktalar[0] en düşük değeri içeriyor.
+           // ve noktalar[points.length-1] en yüksek değeri içerir.
+            document.getElementById("demo11").innerHTML = points5[0];
+        </script>
+        <hr>
+        <p>En büyük sayı: <span id="demo12"></span></p>
+        <script>
+            const points6 = [40, 100, 1, 5, 25, 10];
+            points6.sort(function(a,b) {
+                return b - a
+            });          
+           // şimdi noktalar[0] en yüksek değeri içeriyor
+          // ve noktalar[points.length-1] en düşük değeri içerir
+            document.getElementById("demo12").innerHTML = points6[0];
+        </script>
+        <hr>
+        <h3>Bir Dizide Math.max() Kullanımı</h3>
+        <p>Math.max.apply = Bir dizideki en yüksek sayıyı bulmak için kullanabilirsiniz :</p>
+        <p>En büyük sayı: <span id="demo13"></span></p>
+        <script>
+            const points7 = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo13").innerHTML = myArrayMax(points7);
+
+            function myArrayMax(arr) {
+                return Math.max.apply(null, arr);
+            }
+        </script>
+        <p>Math.max.apply(null, [1, 2, 3]) eşdeğerdir Math.max(1, 2, 3).</p>
+        <hr>
+        <h3>Bir Dizide Math.min() Kullanımı</h3>
+        <p>Math.min.applyBir dizideki en düşük sayıyı bulmak için kullanabilirsiniz :</p>
+        <p>En küçük sayı: <span id="demo14"></span></p>
+
+        <script>
+        const points8 = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo14").innerHTML = myArrayMin(points8);
+        
+        function myArrayMin(arr) {
+          return Math.min.apply(null, arr);
+        }
+        </script> 
+        <p>Math.min.apply(null, [1, 2, 3]) eşdeğerdir Math.min(1, 2, 3).</p>
+        <hr>
+        <h3>Min / Maks JavaScript Yöntemlerim</h3>
+        <p>En büyük sayı: <span id="demo15"></span></p>
+        <script>
+            const points9 = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo15").innerHTML = myArrayMax1(points9);
+
+            function myArrayMax1(arr) {
+                let len = arr.length;
+                let max = -Infinity;
+                while (len--) {
+                    if (arr[len] > max) {
+                        max = arr[len];
+                    }
+                }
+                return max;
+            }
+        </script>
+        <hr>
+        <p>En küçük sayı: <span id="demo16"></span></p>
+        <script>
+            const points10 = [40, 100, 1, 0, 5, 25, 10];
+            document.getElementById("demo16").innerHTML = myArrayMin1(points10);
+
+            function myArrayMin1(arr) {
+                let len1 = arr.length;
+                let min = Infinity;
+                while (len1--) {
+                    if (arr[len1] < min) {
+                        min = arr[len1];
+                    }
+                }
+                return min;
+            }
+        </script>
+        <hr>
+        <h3>Nesne Dizilerini Sıralama</h3>
+        <p>Araba nesnelerini yaşa göre sıralayın:</p>
+        <p id="demo17"></p>
+        <script>
+            const cars = [
+                {type:"Volvo",year:2016},
+                {type:"Saab",year:2001},
+                {type:"BMW",year:2010}
+
+            ];
+
+            displayCars();
+             
+            cars.sort(function(a,b) 
+            {
+               return a.year - b.year
+            });
+
+            function displayCars() {
+                document.getElementById("demo17").innerHTML = 
+                cars[0].type + " " +
+                cars[0].year + "<br>" +
+                cars[1].type + " " +
+                cars[1].year + "<br>" + 
+                cars[2].type + " " +
+                cars[2].year;
+            }         
+        </script>
+        <hr>
+        <p>Araba nesnelerini türe göre sıralamak için düğmeleri tıklayın.</p>
+        <button onclick="myFunction5()">Dene</button>
+        <p id="demo18"></p>
+
+        <script>
+            const cars1 = [
+                 {type:"Volvo", year:2016},
+                 {type:"Saab", year:2001},
+                 {type:"BMW", year:2010}
+            ];
+
+            displayCars1();
+
+            function myFunction5() {
+                cars1.sort(function(a,b)
+                {
+                     let x = a.type.toLowerCase();
+                     let y = b.type.toLowerCase();
+                     if (x < y) {return -1;}
+                     if (x > y) {return 1;}
+                });
+                displayCars1();
+            }
+            function displayCars1() {
+                document.getElementById("demo18").innerHTML = 
+                cars1[0].type + " " +
+                cars1[0].year + "<br>" +
+                cars1[1].type + " " +
+                cars1[1].year + "<br>" +
+                cars1[2].type + " " +
+                cars1[2].year;
+            }
+        </script>
+
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>

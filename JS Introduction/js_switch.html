@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript switch</h2>
+    <p><strong>switch</strong> İfadesi farklı koşullara göre farklı eylemleri gerçekleştirmek için kullanılır.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Pazartesi";
+                break;
+            case 1:
+                day = "Salı";
+                break;
+            case 2:
+                day = "Çarşamba";
+                break;
+            case 3:
+                day = "Perşembe";
+                break;
+            case 4:
+                day = "Cuma";
+                break;
+            case 5:
+                day = "Cumartesi";
+                break;
+            case 6:
+                day = "Pazar";
+        }
+        document.getElementById("demo").innerHTML = "Bugün " + day;
+    </script>
+    <hr>
+    <p><strong>default</strong> Anahtar kelime hiçbir vaka eşleşme varsa çalıştırılacak kodu belirtir:</p>
+    <p id="demo1"></p>
+    <script>
+    let text;
+    switch (new Date().getDay()) {
+  case 6:
+    text = "Bugün Pazar";
+    break;
+  case 0:
+    text = "Bugün Pazartesi";
+    break;
+  default:
+    text = "Hafta Sonunu dört gözle bekliyorum";
+   }
+    document.getElementById("demo1").innerHTML = text;
+    </script>
+    <hr>
+    <p><strong>default</strong> Dava bir şalter bloğunda son durumda olmak zorunda değildir:</p>
+    <p id="demo2"></p>
+    <script>
+    let text1;
+    switch (new Date().getDay()) {
+   default:
+    text1 = "Hafta Sonunu dört gözle bekliyorum";
+    break;
+   case 6:
+    text1 = "Bugün Cumartesi";
+    break;
+   case 0:
+    text1 = "Bugün Pazar";
+   }
+   document.getElementById("demo2").innerHTML = text1;
+   </script>
+   <hr>
+   <p id="demo3"></p>
+   <script>
+   let text2;
+   switch (new Date().getDay()) {
+  case 4:
+  case 5:
+    text2 = "Yakında Hafta Sonu";
+    break;
+  case 0:
+  case 6:
+    text2 = "Hafta Sonu";
+    break;
+  default:
+    text2 = "Hafta sonunu dört gözle bekliyorum";
+    }
+    document.getElementById("demo3").innerHTML = text2;
+   </script>
+   <hr>
+   <p id="demo4"></p>
+     <script>
+     let x = "0";
+
+     switch (x) {
+  case 0:
+    text3 = "Kapalı";
+    break;
+  case 1:
+    text3 = "Açık";
+    break;
+  default:
+    text3 = "Değer bulunmadı";
+       }
+        document.getElementById("demo4").innerHTML = text3;
+     </script>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Data Types (Veri Türü)</h2>
+        <p>Bir sayı ve bir dize eklerken JavaScript, sayıyı bir dize olarak değerlendirir.</p>
+        <p>let x = 16 + "Volvo";</p>
+        <p id="demo" ></p>
+        <script>
+          let x = 16 + "Volvo";
+          document.getElementById("demo").innerHTML = x ;
+        </script>
+        <p>-----------------------------------------------------</p>
+         <p>Bir dize ve bir sayı eklerken JavaScript, sayıyı bir dize olarak değerlendirir.</p>
+        <p>let y = "Volvo" + 16;</p>
+         <p id="de"></p>
+         <script>
+          let y = "Volvo" + 16;
+          document.getElementById("de").innerHTML = y;
+         </script>
+        <p>-----------------------------------------------------</p>
+         <p>JavaScript, ifadeleri soldan sağa doğru değerlendirir. Farklı diziler farklı sonuçlar üretebilir:</p>
+        <p>let z = 16 + 4 + "Volvo";</p>
+         <p id="dem"></p>
+         <script>
+             let z = 16 + 4 + "Volvo";
+             document.getElementById("dem").innerHTML = z;
+         </script>
+          <p>-----------------------------------------------------</p> 
+            <p>JavaScript, ifadeleri soldan sağa doğru değerlendirir. Farklı diziler farklı sonuçlar üretebilir:</p>
+            <p>let k = "Volvo" + 16 + 4;</p>
+            <p id="emo"></p>
+            <script>
+                let k = "Volvo" + 16 + 4;
+                document.getElementById("emo").innerHTML = k;
+            </script>
+             <p>-----------------------------------------------------</p> 
+             <p>JavaScript'in dinamik türleri vardır. Bu, aynı değişkenin farklı veri türlerini tutmak için kullanılabileceği anlamına gelir:</p>
+             <p id="tek"></p>
+             <script>
+              let t; //Tanımsız
+              t = 5; // t bir sayıdır
+              t = "Evin"; // t bir string
+              document.getElementById("tek").innerHTML = t;
+             </script>
+             <p>-----------------------------------------------------</p> 
+             <p>Dizeler tırnak işaretleri ile yazılır. Tek veya çift tırnak kullanabilirsiniz:</p>
+             <p id="car"></p>
+             <script>
+                 let carName1 = "Volvo XC60";
+                 let carName2 = 'Volvo XC60';
+                 document.getElementById("car").innerHTML = carName1 + "<br>" + carName2;
+             </script>
+                          <p>-----------------------------------------------------</p> 
+                          <p>Sayılar ondalıklı veya ondalıksız yazılabilir:</p>
+                          <p id="sayi"></p>
+                          <script>
+                              let X1 = 34.00;
+                              let X2 = 34;
+                              let X3 = 3.14;
+                              document.getElementById("sayi").innerHTML = X1 + "<br>" + X2 + "<br>" + X3;
+                          </script>
+                          <p>-----------------------------------------------------</p> 
+                          <p>Çok büyük veya çok küçük sayılar bilimsel (üstel) gösterimle yazılabilir:</p>
+                          <p id="bilim"></p>
+                          <script>
+                              let h = 123e5;
+                              let j = 123e-5;
+                              document.getElementById("bilim").innerHTML  = h + "<br>" + j;
+                          </script>
+                            <p>-----------------------------------------------------</p> 
+                            <p>Boolean'ların iki değeri olabilir: true veya false:</p>
+                            <p id="bool"></p>
+                            <script>
+                                let n = 5;
+                                let m = 5;
+                                let l = 6;
+                                document.getElementById("bool").innerHTML = (n == m) + "<br>" + (n == l)
+                            </script>
+                             <p>-----------------------------------------------------</p> 
+                             <p>Dizi dizinleri sıfır tabanlıdır, bu da ilk öğenin [0] olduğu anlamına gelir.</p>
+                             <p> const cars = ["Saab", "Volvo", "BMW"];</p>
+                             <p id="dizi"></p>
+                             <script>
+                                 const cars = ["Saab", "Volvo", "BMW"];
+                                 document.getElementById("dizi").innerHTML = cars[0];
+                             </script>
+                              <p>-----------------------------------------------------</p> 
+                               <p></p>
+                               <p id="nesne"></p>
+                               <script>
+                                   const kisi = {
+                                        ad : "Evin",
+                                        soyad : "Gülcan",
+                                        yaş : 23,
+                                        gozrengi : "ela"
+
+                                   };
+                                   document.getElementById("nesne").innerHTML =kisi.ad + " " + kisi.yaş + " yaşında."; 
+                               </script>
+                          <p>-----------------------------------------------------</p> 
+                            <p>typeof operatörü, bir değişkenin veya ifadenin türünü döndürür.</p>
+                            <p id="tip"></p>
+                             <script>
+                                 document.getElementById("tip").innerHTML = typeof "" + "<br>" +
+                                                                            typeof " Evin" + "<br>" +
+                                                                            typeof "Evin Gülcan";
+                             </script>
+                             <p>-----------------------------------------------------</p> 
+                             <p>typeof operatörü, bir değişkenin veya ifadenin türünü döndürür.</p>
+                             <p id="num"></p>
+                              <script>
+                              document.getElementById("num").innerHTML = typeof 0 + "<br>" +
+                                                                         typeof 314 + "<br>" +
+                                                                         typeof 3.14 + "<br>" +
+                                                                         typeof (3) + "<br>" +
+                                                                         typeof (3 + 4);
+                              </script>
+                              <p>-----------------------------------------------------</p> 
+                              <p>Değeri olmayan bir değişkenin değeri (ve veri türü) <b>tanımsızdır</b>.</p>
+                              <p id="tanımsız"></p>
+                              <script>
+                                      let car;
+                                      document.getElementById("tanımsız").innerHTML = car + "<br>" + typeof car;
+                              </script>
+                               <p>-----------------------------------------------------</p> 
+                               <p>Boş bir dize hem yasal bir değere hem de bir türe sahiptir:</p>
+                               <p id="bos"></p>
+                               <script>
+                                       let car = "";
+                                       document.getElementById("bos").innerHTML = 
+                                       "Değer:" + car + "<br>" + "Tür:" + typeof car;
+                               </script>
+                        </body>         
+</html>

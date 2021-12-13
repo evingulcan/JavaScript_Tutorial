@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Operators</h2>
+        <h3>= Operatör</h3>
+        <p>x=10 x'e 10 'u Atıyor</p>
+        <p id="demo"></p>
+        <script>
+           let x = 10;
+           document.getElementById("demo").innerHTML = x; 
+        </script>
+
+        <p>-----------------------------------------------------</p>
+        <h3>+ Operatör</h3>
+        <p>t=2,y=4, z=t+y'yi hesaplayın ve z'yi görüntüleyin:</p>
+        <p id="dem"></p>
+        <script>
+            let t = 2;
+            let y = 4;
+            let z = t + y;
+            document.getElementById("dem").innerHTML = z;
+        </script>
+        <p>-----------------------------------------------------</p>
+         <h3>* Operatör</h3>
+        <p>k=5,l=7 j =k*l'yi hesaplayın ve j'yi görüntüleyin:</p> 
+         <p id="emo"></p>
+         <script>
+             let k = 5;
+             let l =  7;
+             let j = k * l;
+             document.getElementById("emo").innerHTML = j;
+         </script>
+           <p>-----------------------------------------------------</p>
+           <h3>+= Operatör</h3>
+           <p id="evo"></p>
+           <script>
+               var s = 10;
+               s  += 5;
+               document.getElementById("evo").innerHTML = s;
+           </script>
+          <p>-----------------------------------------------------</p>
+           <h3>+ Operatörü</h3>
+          <p>Dizeleri birleştirir (ekler).</p>
+           <p id="dm"></p>
+           <script>
+               let text1 = "Evin";
+               let text2 = "Gülcan";
+               let text3 = text1 + " " + text2;
+               document.getElementById("dm").innerHTML = text3;
+           </script>
+          <p>-----------------------------------------------------</p>
+        <h3>+= Atama Operatörü</h3>
+          <p>Dizeleri birleştirebilir.</p>
+         <p id="one"></p>
+         <script>
+             let text1 = "Güzel bir ";
+             text1 += "gün";
+             document.getElementById("one").innerHTML = text1; 
+         </script>
+           <p>-----------------------------------------------------</p>
+           <p></p>  
+           <p id="two"></p>
+           <script>
+               let h = 5 + 5;
+               let d = "5"  + 5;
+               let v = "Merhaba" + 5;
+               document.getElementById("two").innerHTML = h + "<br>" + d + "<br>" + v;
+           </script>
+        </body>
+</html>
+
+<!--
+  JavaScript Aritmetik Operatörleri  
++ = Ekleme
+- = çıkarma
+* =	Çarpma işlemi
+** = Üs (ES2016)
+/ =	Bölüm
+% = Modül (Bölme Kalanı)
+++ = Artış
+-- = Azaltma
+
+JavaScript Atama Operatörleri
+
+Operator	Example 	Same As
+=	        x = y     	x = y
++=          x += y  	x = x + y
+-=       	x -= y  	x = x - y
+*=	        x *= y	    x = x * y
+/=	        x /= y	    x = x / y
+%=       	x %= y  	x = x % y
+**=     	x **= y 	x = x ** y
+
+
+JavaScript Karşılaştırma Operatörleri
+==   = eşittir
+===  = eşit değer ve eşit tip
+!=   = eşit değil
+!==  =  eşit değerde değil veya eşit tipte değil
+>    = daha büyük
+<    = daha az
+>=   = büyük veya eşit
+<=   = küçük veya eşit
+?    = üçlü operatör
+
+JavaScript Mantıksal Operatörleri
+&&  = mantıklı ve
+||  = mantıksal veya
+!   = mantıklı değil
+
+JavaScript Tipi Operatörler
+typeof =  Bir değişkenin türünü döndürür
+instanceof =  Bir nesne, bir nesne türünün örneğiyse true değerini döndürür
+
+JavaScript Bitsel Operatörler
+& =	AND	
+| =	OR	
+~ =	NOT	
+^ =	XOR	
+<< = Zero 
+>> = Signed 
+>>> = Zero 
+-->

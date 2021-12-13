@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Regular Expressions</h2>
+    <h3>String search()'i Normal Bir İfadeyle Kullanma</h3>
+    <p>"Evin" için bir dizi arayın ve eşleşmenin konumunu görüntüleyin:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let text = "Merhaba Evin!!";
+        let n = text.search(/evin/i);
+        document.getElementById("demo").innerHTML = n;
+    </script>
+    <hr>
+    <h3>Normal İfadeyle String replace() kullanın</h3>
+    <p>replace()Yöntem, bir dizi bir başka değeriyle belirtilen bir değer yerine geçer:</p>
+    <p>Aşağıdaki paragrafta "Evin"u "Gülcan" ile değiştirin:</p>
+    <button onclick="myFunction()">Tıklayı!!!</button>
+    <p id="demo1">Merhaba Evin!</p>
+
+    <script>
+        function myFunction() {
+            let text1 = document.getElementById("demo1").innerHTML;
+            document.getElementById("demo1").innerHTML =
+                text1.replace(/evin/i, "Gülcan");
+        }
+    </script>
+
+    <hr>
+    <h2>RegExp Nesnesini Kullanma</h2>
+    <h3>testi() kullanma</h3>
+    <p>Bir model için bir dize arar ve sonuca bağlı olarak doğru veya yanlış döndürür.</p>
+    <p>Sonraki paragrafta bir "e" arayın:</p>
+
+    <p id="p01">Hayattaki en güzel şeyler bedavadır!!</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        let text2 = document.getElementById("p01").innerHTML;
+        const pattern = /e/;
+        document.getElementById("demo2").innerHTML = pattern.test(text2);
+    </script>
+
+    <hr>
+    <h3>exec() kullanma</h3>
+    <p>Belirtilen bir desen için bir dize arar ve bulunan metni bir nesne olarak döndürür.</p>
+    <p id="demo3"></p>
+
+    <script>
+        const obj = /e/.exec("Metinde 2. pozisyonda e bulundu: Hayattaki en iyi şeyler bedava!");
+        document.getElementById("demo3").innerHTML =
+            "Found " + obj[0] + " konumunda" + obj.index + " metinde: " + obj.input;
+    </script>
+</body>
+
+</html>

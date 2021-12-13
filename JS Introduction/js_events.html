@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript HTML Events</h2>
+       
+        <button onclick="document.getElementById('demo').innerHTML = Date()">Saat?</button>
+       <p id="demo"></p>
+       <p>------------------------------------------------------------------------</p>
+        <button onclick="this.innerHTML = Date()">Saat?</button>
+        <p>------------------------------------------------------------------------</p>
+        <p>Tarihi görüntülemek için düğmeye tıklayın.</p>
+        <button onclick="displayDate()">Saat?</button>
+        <script>
+            function displayDate() {
+                document.getElementById("demo1").innerHTML = Date();
+            }
+        </script>
+        <p id="demo2"></p>
+    </body>
+</html>
+<!--
+  onchange = Bir HTML öğesi değiştirildi
+  onclick  = Kullanıcı bir HTML öğesini tıklatır
+  onmouseover = Kullanıcı, fareyi bir HTML öğesinin üzerine getirir
+  onmouseout = Kullanıcı, fareyi bir HTML öğesinden uzaklaştırır
+  onkeydown = Kullanıcı bir klavye tuşuna basar
+  onload = Tarayıcı sayfayı yüklemeyi tamamladı
+-->

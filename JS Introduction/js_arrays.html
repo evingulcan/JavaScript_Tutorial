@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Arrays</h2>
+    <p>Dizi, birden fazla değer tutabilen özel bir değişkendir:</p>
+    <p id="demo"></p>
+    <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo").innerHTML = cars;
+    </script>
+    <hr>
+    <p>Ayrıca bir dizi oluşturabilir ve ardından öğeleri sağlayabilirsiniz:</p>
+    <p id="demo1"></p>
+    <script>
+        const citys = [];
+        citys[0] = "Ankara";
+        citys[1] = "Batman";
+        citys[2] = "Van";
+        document.getElementById("demo1").innerHTML = citys;
+    </script>
+    <hr>
+    <p>Ayrıca bir Dizi oluşturur ve ona değerler atar:</p>
+    <p id="demo2"></p>
+    <script>
+        const countrys = new Array("Türkiye", "İngiltere", "Almanya");
+        document.getElementById("demo2").innerHTML = countrys;
+    </script>
+    <hr>
+    <p>JavaScript dizisi öğelerine sayısal dizinler kullanılarak erişilir (0'dan başlayarak).</p>
+    <p id="demo3"></p>
+    <script>
+        const cars1 = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo3").innerHTML = cars1[0];
+    </script>
+    <hr>
+    <p>JavaScript dizisi öğelerine sayısal dizinler kullanılarak erişilir (0'dan başlayarak).</p>
+    <p id="demo4"></p>
+    <script>
+        const countrys1 = ["İstanbul", "İzmir", "Diyarbakır"];
+        countrys1[1] = "Batman";
+        document.getElementById("demo4").innerHTML = countrys1;
+    </script>
+    <hr>
+    <p>JavaScript, nesne özelliklerine erişmek için adları kullanır.</p>
+    <p id="demo5"></p>
+    <script>
+        const person = { firstName: "Evin", lastName: "Gülcan", age: 23 };
+        document.getElementById("demo5").innerHTML = person.firstName;
+    </script>
+    <hr>
+    <h3>İlk Dizi Öğesine Erişim</h3>
+    <p>JavaScript dizi öğelerine, sayısal dizinler kullanılarak erişilir (0'dan başlayarak).</p>
+    <p id="demo6"></p>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo6").innerHTML = fruits[0];
+    </script>
+    <hr>
+    <h3>Son Dizi Öğesine Erişim</h3>
+    <p>JavaScript dizi öğelerine, sayısal dizinler kullanılarak erişilir (0'dan başlayarak).</p>
+    <p id="demo7"></p>
+    <script>
+        var fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo7").innerHTML = fruits1[fruits1.length - 1];
+    </script>
+    <hr>
+    <h3>Döngü Dizi Elemanları</h3>
+    <p>Bir dizide dolaşmanın en iyi yolu bir standart for döngüsü kullanmaktır:</p>
+    <p id="demo8"></p>
+    <script>
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits2.length;
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits2[i] + " </li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo8").innerHTML = text;
+    </script>
+    <hr>
+    <p>Array.forEach(), her dizi öğesi için bir işlev çağırır.</p>
+    <p id="demo9"></p>
+    <script>
+        const fruits3 = ["Muz", "Portakal", "Elma", "Mango"];
+        let text1 = "<ul>";
+        fruits3.forEach(myFunction);
+        text1 += "</ul>";
+        document.getElementById("demo9").innerHTML = text1;
+
+        function myFunction(value) {
+            text1 += "<li>" + value + "</li>";
+        }
+
+    </script>
+    <hr>
+    <h3>Dizi Elemanları Ekleme</h3>
+    <p>Bir diziye yeni bir eleman eklemenin en kolay yolu şu push()yöntemi kullanmaktır :</p>
+    <button onclick="myFun()">Ekleyin...</button>
+    <p id="demo10"></p>
+    <script>
+        const meyveEkle = ["Muz", "Kiwi", "Elma", "Limon"];
+        document.getElementById("demo10").innerHTML = meyveEkle;
+
+        function myFun() {
+            meyveEkle.push("Kavun");
+
+            document.getElementById("demo10").innerHTML = meyveEkle;
+        }
+    </script>
+    <hr>
+    <p>Şu lengthözellik kullanılarak bir diziye yeni eleman da eklenebilir :</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo11"></p>
+
+    <script>
+        const meyveLength = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo11").innerHTML =  meyveLength;
+
+        function myFunction() {
+            meyveLength[meyveLength.length] = "Lemon";
+            document.getElementById("demo11").innerHTML =  meyveLength;
+        }
+    </script>
+    <hr>
+    <p>Yüksek indeksli elemanlar eklemek, bir dizide tanımsız "delikler" oluşturabilir.</p>
+    <p id="demo12"></p>
+    <script>
+      const sehir = ["Batman", "Diyarbakır", "Van"];
+      sehir[6] = "İzmir";
+
+      let Len = sehir.length;
+      let text3 = "";
+      for (i = 0; i < Len; i++) {
+      text3 += sehir[i] + "<br>";
+        }
+       document.getElementById("demo12").innerHTML = text3;   
+     </script>
+     <hr>
+     <h3>ilişkisel diziler</h3>
+     <p>Adlandırılmış dizinlere sahip dizilere ilişkisel diziler (veya karmalar) denir.</p>
+     <p id="demo13"></p>
+     <script>
+         const persons = [];
+         persons[0] = "Evin";
+         persons[1] = "Gülcan";
+         persons[2] = 23;
+         document.getElementById("demo13").innerHTML = persons[0] + " " + persons.length;
+     </script>
+     <hr>
+     <p>Bir diziye erişirken adlandırılmış bir dizin kullanırsanız, JavaScript diziyi standart bir nesne olarak yeniden tanımlar ve bazı dizi yöntemleri ve özellikleri tanımsız veya yanlış sonuçlar üretir.</p>
+     <p id="demo14"></p>
+     <script>
+         const persons1 = [];
+         persons1["firstName"] = "Evin";
+         persons1["lastName"] = "Gülcan";
+         persons1["age"] = 46; 
+      document.getElementById("demo14").innerHTML =
+        persons1[0] + " " + persons1.length;
+     </script>
+     <hr>
+     <h3>new Array()</h3>
+     <p>JavaScript'in yerleşik bir dizi yapıcısı vardır new Array().</p>
+     <p>Yeni Array() kullanmaktan kaçının. Bunun yerine [] kullanın.</p>
+    <p id="demo15"></p>
+    <script>
+    //const points = new Array(40, 100, 1, 5, 25, 10);
+    const points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo15").innerHTML = points[0];  
+    </script>
+    <hr>
+    <p>Üç elemanlı bir Dizi oluşturun.</p>
+    <p>İki elemanlı bir Dizi oluşturun.</p>
+   <p id="demo16"></p>
+   <script>
+   var point1 = new Array(40, 100, 1);
+   var point2 = new Array(40, 100);
+   var point3 = new Array(40);
+   var point4 = [40];
+   document.getElementById("demo16").innerHTML = "üç elemanlı dizi: " + point1 + "<br>" + "iki elemanlı dizi: " +  point2 + "<br>" + "tek elemanlı dizi: " + point3 + "<br>" + "tek elemanlı dizi new Array() kullanmadan: " + point4;  
+   </script>
+   <hr>
+   <p>Bir değişkenin dizi olup olmadığını nasıl anlarım?</p>
+   <p>JavaScript operatörünün typeof" object" döndürmesidir :</p>
+   <p>typeof operatörü, bir dizide kullanıldığında nesneyi döndürür:</p>
+   <p id="demo17"></p>
+   <script>
+       const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+       document.getElementById("demo17").innerHTML = typeof fruits4;
+   </script>  
+   <p>JavaScript dizisi bir nesne olduğu için typeof operatörü nesne döndürür.</p>
+   <hr>
+   <h3>1.Çözüm:</h3>
+   <p>Bu sorunu çözmek için ECMAScript 5 (JavaScript 2009) yeni bir yöntem tanımladı Array.isArray():</p>
+   <p id="demo18"></p>
+   <script>
+   const fruits5 = ["Banana", "Orange", "Apple"];
+   document.getElementById("demo").innerHTML = Array.isArray(fruits5);
+   </script>
+    <hr>
+    <h3>2.Çözüm:</h3>
+    <p>instanceof operatörü, bir nesne belirli bir yapıcısı tarafından oluşturulursa operatörü true döndürür:</p>
+    <p id="demo19"></p>
+    <script>
+        var fruits6 = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo19").innerHTML = fruits6 instanceof Array;
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Global "use strict" declaration.</h2>
+
+    <p>Hata raporunu görmek için tarayıcınızda (F12) hata ayıklamayı etkinleştirin.</p>
+
+    <script>
+        "use strict";
+        myFunction();
+
+        function myFunction() {
+            y = 3.14;   // Bu bir hataya neden olur( y tanımlı değil)
+        }
+    </script>
+    <hr>
+    <p>Bir değişkenin (veya nesnenin) silinmesine izin verilmez.</p>
+    <script>
+        "use strict";
+        let x = 3.14;
+        delete x;     // Bu bir hataya neden olur
+    </script>
+    <hr>
+    <p>Bir işlevin silinmesine izin verilmez.</p>
+    <script>
+        "use strict";
+        function a(p1, p2) { };
+        delete a;        //  Bu bir hataya neden olur 
+    </script>
+    <hr>
+    <p>Bir parametre adının kopyalanmasına izin verilmez.</p>
+    <script>
+        "use strict";
+        function b(p1, p1) { };   // Bu bir hataya neden olur 
+    </script>
+    <hr>
+    <p>Sekizli sayısal değişmezlere izin verilmez.</p>
+    <script>
+        "use strict";
+        let c = 010;   // Bu bir hataya neden olur 
+    </script>
+    <hr>
+    <p>Sekizli kaçış karakterlerine izin verilmez.</p>
+    <script>
+        "use strict";
+        let d = "\010";   // Bu bir hataya neden olur 
+    </script>
+    <hr>
+    <p>Salt okunur bir özelliğe yazmaya izin verilmez.</p>
+    <script>
+        "use strict";
+        const obj = {};
+        Object.defineProperty(obj, "z", { value: 0, writable: false });
+
+        obj.z = 3.14;   // Bu bir hataya neden olur 
+    </script>
+    <hr>
+    <p>Salt-alma özelliğine yazılmasına izin verilmez.</p>
+    <script>
+        "use strict";
+        const obj = { get s() { return 0 } };
+
+        obj.s = 3.14;  // Bu bir hataya neden olur 
+    </script>
+    <hr>
+    <p>Udeletlenebilir bir özelliğin silinmesine izin verilmez.</p>
+    <script>
+        "use strict";
+        delete Object.prototype;   // Bu bir hataya neden olur 
+    </script>
+    <hr>
+    <p>"eval" dizesi değişken olarak kullanılamaz.</p>
+    <script>
+        "use strict";
+        let eval = 3.14;   // Bu bir hataya neden olur  
+    </script>
+    <hr>
+    <p>"Argümanlar" dizesi değişken olarak kullanılamaz.</p>
+    <script>
+        "use strict";
+        let arguments = 3.14;   // Bu bir hataya neden olur 
+    </script>
+    <hr>
+    <p>with ifadesine izin verilmez.</p>
+    <script>
+        "use strict";
+        with (Math) { k = cos(2) };    // Bu bir hataya neden olur 
+    </script>
+    <hr>
+    <p>Güvenlik nedenleriyle eval() öğesinin çağrıldığı kapsamda değişkenler oluşturmasına izin verilmez.</p>
+    <script>
+        "use strict";
+        eval("var l = 2");
+        alert(l);    // Bu bir hataya neden olur 
+    </script>
+    <hr>
+    <p>İşlevlerin içinde, "this" anahtar sözcüğü, belirtilmediği takdirde artık global nesne değildir:</p>
+    <script>
+        "use strict";
+        function myFunction1() {
+          alert(this);
+        }
+        myFunction1();
+     </script>
+        
+
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Error Handling</h2>
+
+    <p>Bir hatayı görüntülemek için <b>catch</b> nasıl kullanılır .</p>
+
+    <p id="demo"></p>
+
+    <script>
+        try {
+            adddlert("Hoşgeldin Evin!");
+        }
+        catch (err) {
+            document.getElementById("demo").innerHTML = err.message;
+        }
+    </script>
+    <hr>
+    <h3>JavaScript try catch</h3>
+
+    <p>Lütfen 5 ile 10 arasında bir sayı girin:</p>
+
+    <input id="demo1" type="text">
+    <button type="button" onclick="myFunction()">Test Girişi</button>
+    <p id="p01"></p>
+
+    <script>
+        function myFunction() {
+            const message = document.getElementById("p01");
+            message.innerHTML = "";
+            let x = document.getElementById("demo1").value;
+            try {
+                if (x == "") throw "boş";
+                if (isNaN(x)) throw "sayı değil";
+                x = Number(x);
+                if (x < 5) throw "düşük";
+                if (x > 10) throw "yüksek";
+            }
+            catch (err) {
+                message.innerHTML = "Giriş " + err;
+            }
+        }
+    </script>
+    <hr>
+    <h3>finally İfadesi</h3>
+    <p>finally İfadesi Sonucun ne olursa olsun, denemede ve yakalamadan sonra, kodu çalıştırmak sağlar:</p>
+    <p>Lütfen 5 ile 10 arasında bir sayı girin:</p>
+
+    <input id="demo2" type="text">
+    <button type="button" onclick="myFunction()">Test Girişi</button>
+
+    <p id="p02"></p>
+
+    <script>
+        function myFunction() {
+            const message = document.getElementById("p02");
+            message.innerHTML = "";
+            let x = document.getElementById("demo2").value;
+            try {
+                if (x == "") throw "boş";
+                if (isNaN(x)) throw "sayı değil";
+                x = Number(x);
+                if (x > 10) throw "yüksek";
+                if (x < 5) throw "düşük";
+            }
+            catch (err) {
+                message.innerHTML = "giriş " + err;
+            }
+            finally {
+                document.getElementById("demo").value = "";
+            }
+        }
+    </script>
+    <hr>
+    <h3>Aralık Hatası</h3>
+    <p>RangeError Yasal değerler aralığının dışında bir sayı kullanırsanız A atılır.</p>
+    <p>Bir sayının anlamlı basamak sayısını 500 olarak ayarlayamazsınız:</p>
+
+    <p id="demo3">
+
+        <script>
+            let num = 1;
+            try {
+                num.toPrecision(500);
+            }
+            catch (err) {
+                document.getElementById("demo3").innerHTML = err.name;
+            }
+        </script>
+        <hr>
+    <h3>Referans Hatası</h3>
+    <p>ReferenceError Bildirilmemiş bir değişken kullanırsanız (referans) A atılır:</p>
+    <p>Var olmayan bir değişkenin değerini kullanamazsınız:</p>
+
+    <p id="demo4"></p>
+
+    <script>
+        let a = 5;
+        try {
+            a = b + 1;
+        }
+        catch (err) {
+            document.getElementById("demo4").innerHTML = err.name;
+        }
+    </script>
+    <hr>
+    <h3>Sözdizimi hatası</h3>
+    <p>SyntaxError Kodu bir sözdizimi hatasıyla değerlendirmeye çalışırsanız A atılır.</p>
+    <p>Sözdizimi hatası içeren kodu değerlendiremezsiniz:</p>
+
+    <p id="demo5"></p>
+
+    <script>
+        try {
+            eval("alert('Merhaba)");
+        }
+        catch (err) {
+            document.getElementById("demo5").innerHTML = err.name;
+        }
+    </script>
+    <hr>
+    <h3>Tip Hatası</h3>
+    <p>TypeError Beklenen tür aralığının dışında bir değer kullanırsanız A atılır:</p>
+    <p>Bir sayıyı büyük harfe dönüştüremezsiniz:</p>
+
+    <p id="demo6"></p>
+
+    <script>
+        let num1 = 1;
+        try {
+            num1.toUpperCase();
+        }
+        catch (err) {
+            document.getElementById("demo6").innerHTML = err.name;
+        }
+    </script>
+    <hr>
+    <h3>URI (Tekdüzen Kaynak Tanımlayıcı) Hatası</h3>
+    <p>Bir URIErrorURI işlevinde geçersiz karakterler kullanırsanız A atılır:</p>
+    <p>Bazı karakterlerin kodu decodeURI() ile çözülemez:</p>
+
+    <p id="demo7"></p>
+
+    <script>
+        try {
+            decodeURI("%%%");
+        }
+        catch (err) {
+            document.getElementById("demo7").innerHTML = err.name;
+        }
+    </script>
+
+
+</body>
+
+</html>
+<!--
+try = İfadende hatalar için kod bloğu test etmenizi sağlar.
+catch = Deyimi hatayı işlemek sağlar.
+throw = İfadesi özel hatalarını oluşturmanızı sağlar.
+finally = İfadesi Sonucun ne olursa olsun, denemede ve yakalamadan sonra, kod çalıştırmasını sağlar.
+-->

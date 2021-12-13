@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Strings</h2>
+        <p>JavaScript dizesi, tırnak içine alınmış sıfır veya daha fazla karakterdir.</p>
+        <p id="demo"></p>
+        <script>
+            let text = "Evin Gülcan"; // Tırnak içine yazılan dize
+            document.getElementById("demo").innerHTML = text;
+        </script>
+        <p>------------------------------------------------------------------------------</p>
+        <p>Dizeler tırnak içine yazılır.Tek veya çift tırnak kullanabilirsiniz:</p>
+        <p id="demo1"></p>
+        <script>
+            let carName1 = "Volvo XC60";
+            let carName2 = "Volvo XC60";
+            document.getElementById("demo1").innerHTML  = carName1 + " " + carName2;
+        </script>
+       <p>------------------------------------------------------------------------------</p>
+       <p>length özelliği, bir dizenin uzunluğunu döndürür:</p>
+       <p id="demo2"></p>
+       <script>
+           let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+           document.getElementById("demo2").innerHTML = text1.length;
+       </script>
+     <p>------------------------------------------------------------------------------</p>
+     <p>Kaçış dizisi \", bir dizeye çift tırnak işareti ekler</p>
+     <p id="demo3"></p>
+     <script>
+         let text2 = "Biz kuzeyden sözde \"Vikingler\" izler.";
+         document.getElementById("demo3").innerHTML = text2;
+        </script>
+        <p>------------------------------------------------------------------------------</p>
+        <p>Kaçış dizisi \' bir dizgeye tek bir alıntı ekler.</p>
+        <p id="demo4"></p>
+        <script>
+            let text3 = "It\'s alright.";
+            document.getElementById("demo4").innerHTML = text3;
+        </script>
+           <p>------------------------------------------------------------------------------</p>
+           <p>Çıkış dizisi \\ bir dizgeye ters eğik çizgi ekler.</p>
+           <p id="demo5"></p>
+           <script>
+               let text4 = "\\ karakterine ters eğik çizgi denir.";
+               document.getElementById("demo5").innerHTML = text4;
+           </script>
+        <p>------------------------------------------------------------------------------</p>
+         <p> x bir string =  let x = "Evin"</p>
+         <p> y bir object =  let y = new String("Evin")</p>
+        <p id="demo6"></p>
+        <script>
+            // x bir string
+            let x = "Evin";
+
+            // y bir object
+            let y = new String("Evin");
+
+            document.getElementById("demo6").innerHTML = typeof x + "<br>" + typeof y ;
+        </script>
+
+    </body>
+</html>
+<!--
+    \" =  Bir dizeye çift tırnak işareti ekler.
+    \' =  Bir dizeye tek bir alıntı ekler.
+    \\ =  Bir dizgeye ters eğik çizgi ekler.
+
+    \b = Geri Al
+    \f = Form Beslemesi
+    \n = Yeni Hat
+    \r = Taşıma İadesi
+    \t = Yatay Tablo
+    \v = Dikey Tablo
+-->

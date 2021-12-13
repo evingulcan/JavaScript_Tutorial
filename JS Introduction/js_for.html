@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For Loop</h2>
+    <p><strong>for Döngü</strong> sözdizimi aşağıdaki gibidir:</p>
+
+    <p id="demo"></p>
+    <script>
+        let text = "";
+
+        for (let i = 0; i < 5; i++) {
+            text += "Sayı  " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <hr>
+    <p id="demo1"></p>
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let i, len, text1;
+
+        for (i = 0, len = cars.length, text1 = ""; i < len; i++) {
+            text1 += cars[i] + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text1;
+    </script>
+    <hr>
+    <p id="demo2"></p>
+    <script>
+        const cars1 = ["BMW", "Volvo", "Saab", "Ford"];
+        let x = 2;
+        let len1 = cars1.length;
+        let text2 = "";
+
+        for (; x < len1; x++) {
+            text2 += cars1[x] + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = text2;
+    </script>
+     <hr>
+     <p id="demo3"></p>
+     <script>
+         const cars2 = ["BMW", "Volvo", "Saab", "Ford"];
+         let y = 0;
+         let len2 = cars2.length;
+         let text3 = "";
+ 
+         for (; y < len2;) {
+             text3 += cars2[y] + "<br>";
+             y++;
+         }
+         document.getElementById("demo3").innerHTML = text3;
+     </script>
+     <hr>
+     <p>var Bir döngüde kullanma :</p>
+     <p id="demo4"></p>
+     <script>
+         var a = 5;
+ 
+         for (var a = 0; a < 10; a++) {
+            
+         }
+         document.getElementById("demo4").innerHTML = a;
+     </script>
+       <hr>
+       <p>let Bir döngüde kullanma :</p>
+       <p id="demo5"></p>
+       <script>
+           let b = 5;
+   
+           for (let b = 0; b < 10; b++) {
+              
+           }
+           document.getElementById("demo5").innerHTML = b;
+       </script>
+
+
+</body>
+
+</html>

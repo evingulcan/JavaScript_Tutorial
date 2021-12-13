@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Matematik Yöntemleri</h2>
+
+    <p>Math.PI, bir dairenin çevresinin çapına oranını döndürür:</p>
+
+    <p id="demo"></p>
+
+    
+     <script>
+    document.getElementById("demo").innerHTML = 
+    "<p><b>Math.E:</b> " + Math.E + "</p>" +
+    "<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+    "<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+    "<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+    "<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+    "<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+    "<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+    "<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>";
+    </script>
+    <hr>
+    <h3>Math.round()</h3>
+    <p>Math.round(x) en yakın tamsayıyı döndürür:</p>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = Math.round(4.5) + "<br>" +
+                                                     Math.round(4.6) + "<br>" +
+                                                     Math.round(4.4);
+    </script>
+    <hr>
+    <h3>Math.ceil()</h3>
+    <p>Math.ceil(x) x değeri yuvarlak döner kadar en yakın tamsayıya:</p>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML = Math.ceil(4.9) + "<br>" +
+                                                     Math.ceil(4.7) + "<br>" +
+                                                     Math.ceil(4.4) + "<br>" +
+                                                     Math.ceil(4.2) + "<br>" +
+                                                     Math.ceil(-4.2);
+    </script>
+    <hr>
+    <h3>Math.floor()</h3>
+    <p>Math.floor(x) x değeri yuvarlak döner aşağı en yakın tamsayıya:</p>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = Math.floor(4.9) + "<br>" +
+                                                     Math.floor(4.7) + "<br>" +
+                                                     Math.floor(4.4) + "<br>" +
+                                                     Math.floor(4.2) + "<br>" +
+                                                     Math.floor(-4.2);
+    </script>
+     <hr>
+     <h3>Math.trunc()</h3>
+     <p>Math.trunc(x) x'in tamsayı kısmını döndürür:</p>
+     <p id="demo4"></p>
+     <script>
+         document.getElementById("demo4").innerHTML = Math.trunc(4.9) + "<br>" +
+                                                      Math.trunc(4.7) + "<br>" +
+                                                      Math.trunc(4.4) + "<br>" +
+                                                      Math.trunc(4.2) + "<br>" +
+                                                      Math.trunc(-4.2);
+     </script>
+     <hr>
+     <h3>Math.sign()</h3>
+     <p>Math.sign(x) x negatif, boş veya pozitif ise döner:</p>
+     <p id="demo5"></p>
+     <script>
+         document.getElementById("demo5").innerHTML = Math.sign(-4) + "<br>" +
+                                                      Math.sign(0) + "<br>" +
+                                                      Math.sign(4);
+     </script>
+      <hr>
+      <h3>Math.pow()</h3>
+      <p>Math.pow(x, y) x'in değerini y'nin gücüne döndürür:</p>
+      <p id="demo6"></p>
+      <script>
+          document.getElementById("demo6").innerHTML = Math.pow(8,2);
+      </script>
+        <hr>
+        <h3>Math.sqrt()</h3>
+        <p>Math.sqrt(x) x'in karekökünü döndürür:</p>
+        <p id="demo7"></p>
+        <script>
+            document.getElementById("demo7").innerHTML = Math.sqrt(64);
+        </script>
+        <hr>
+        <h3>Math.abs()</h3>
+        <p>Math.abs(x) x'in mutlak (pozitif) değerini döndürür:</p>
+        <p id="demo8"></p>
+        <script>
+            document.getElementById("demo8").innerHTML = Math.abs(-4.7);
+        </script>
+         <hr>
+         <h3>Math.sin()</h3>
+         <p>Math.sin(x) x açısının sinüsünü (-1 ile 1 arasında bir değer) döndürür (radyan olarak verilir).</p>
+         <p>Radyan cinsinden açı = (derece cinsinden açı) * PI / 180.</p>
+         <p id="demo9"></p>
+         <script>
+             document.getElementById("demo9").innerHTML = "90 derecenin sinüs değeri " + Math.sin(90 * Math.PI / 180) ;
+         </script>
+          <hr>
+          <h3>Math.cos()</h3>
+          <p>Math.cos(x) x açısının (radyan cinsinden verilir) kosinüsünü (-1 ile 1 arasında bir değer) döndürür.</p>
+          <p>Radyan cinsinden açı = (derece cinsinden açı) * PI / 180.</p>
+          <p id="demo10"></p>
+          <script>
+              document.getElementById("demo10").innerHTML = "0 derecenin kosinüs değeri  " + Math.cos(0 * Math.PI / 180) ;
+          </script>
+          <hr>
+          <h3>Math.min() ve Math.max()</h3>
+          <p>Math.min()ve Math.max()bir argüman listesindeki en düşük veya en yüksek değeri bulmak için kullanılabilir:</p>
+          <p id="demo11"></p>
+          <script>
+              document.getElementById("demo11").innerHTML = Math.min(0, 130, 30, 20, -8, -200) + "<br>" +
+                                                            Math.max(0, 150, 30, 20, -8, -200);
+          </script>
+          <hr>
+          <h3>Math.random()</h3>
+          <p>Math.random() 0 (dahil) ile 1 (hariç) arasında rastgele bir sayı döndürür:</p>
+          <p id="demo12"></p>
+          <script>
+             document.getElementById("demo12").innerHTML = Math.random();
+         </script>
+          <hr>
+          <h3>Math.log()</h3>
+          <p>Math.log(x) x'in doğal logaritmasını döndürür.</p>
+          <p id="demo13"></p>
+          <script>
+             document.getElementById("demo13").innerHTML = Math.log(1) + "<br>" +
+                                                           Math.log(2) + "<br>" +
+                                                           Math.log(3) + "<br>" +
+                                                           Math.log(10);
+         </script>
+             <hr>
+             <h3>Math.log2()</h3>
+             <p>Math.log2(x) x'in 2 tabanlı logaritmasını döndürür.</p>
+             <p id="demo14"></p>
+             <script>
+                document.getElementById("demo14").innerHTML = Math.log2(8);
+            </script>
+                <hr>
+                <h3>Math.log10()</h3>
+                <p>Math.log10(x) x'in 10 tabanlı logaritmasını döndürür.</p>
+                <p id="demo15"></p>
+                <script>
+                   document.getElementById("demo15").innerHTML = Math.log10(1000);
+               </script>
+
+
+        
+
+
+ 
+</body>
+
+</html>
